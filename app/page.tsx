@@ -1,6 +1,6 @@
 "use client"
 
-import { useState, useMemo } from "react"
+import { useState, useMemo, useEffect } from "react"
 import { Search, TrendingUp, Zap, Target } from "lucide-react"
 import NewsCard from "@/components/news-card"
 import SearchStats from "@/components/search-stats"
@@ -18,58 +18,64 @@ export default function HomePage() {
 
   const allNews = useMemo(() => generateMockNews(), [])
 
-  const stats = useMemo(() => {
-    const categories = new Map<string, number>()
-    allNews.forEach((news) => {
-      categories.set(news.category, (categories.get(news.category) || 0) + 1)
-    })
-
-    const topCategory = Array.from(categories.entries()).sort((a, b) => b[1] - a[1])[0]
-
-    return {
-      totalNews: allNews.length,
-      totalCategories: categories.size,
-      topCategory: topCategory?.[0] || "N/A",
-      topCategoryCount: topCategory?.[1] || 0,
-    }
-  }, [allNews])
-
-  // Sequential Search Implementation
-  const filteredNews = useMemo(() => {
+  // compute filtered results + timing in a pure memo (no setState here)
+  const searchResult = useMemo(() => {
     if (!searchQuery.trim()) {
-      setSearchStats(null)
-      return allNews
+      return { results: allNews, time: 0, itemsChecked: 0 }
     }
 
-    setIsSearching(true)
     const startTime = performance.now()
     const query = searchQuery.toLowerCase()
-    const results = []
+    const results: typeof allNews = []
     let itemsChecked = 0
 
-    // Sequential Search: iterate through all items one by one
     for (let i = 0; i < allNews.length; i++) {
       itemsChecked++
       const newsItem = allNews[i]
-
-      // Check if search query matches title or category
       if (newsItem.title.toLowerCase().includes(query) || newsItem.category.toLowerCase().includes(query)) {
         results.push(newsItem)
       }
     }
 
     const endTime = performance.now()
-    const searchTime = endTime - startTime
+    return { results, time: endTime - startTime, itemsChecked }
+  }, [searchQuery, allNews])
 
+  const filteredNews = searchResult.results
+
+  // update search-related state in an effect (no state updates inside useMemo)
+  useEffect(() => {
+    if (!searchQuery.trim()) {
+      setSearchStats(null)
+      setIsSearching(false)
+      return
+    }
+
+    setIsSearching(true)
     setSearchStats({
-      time: searchTime,
-      itemsChecked,
-      itemsFound: results.length,
+      time: searchResult.time,
+      itemsChecked: searchResult.itemsChecked,
+      itemsFound: searchResult.results.length,
+    })
+    setIsSearching(false)
+  }, [searchResult, searchQuery])
+
+  // compute stats from the currently visible list (filteredNews)
+  const stats = useMemo(() => {
+    const categories = new Map<string, number>()
+    filteredNews.forEach((news) => {
+      categories.set(news.category, (categories.get(news.category) || 0) + 1)
     })
 
-    setIsSearching(false)
-    return results
-  }, [searchQuery, allNews])
+    const topCategory = Array.from(categories.entries()).sort((a, b) => b[1] - a[1])[0]
+
+    return {
+      totalNews: filteredNews.length,
+      totalCategories: categories.size,
+      topCategory: topCategory?.[0] || "N/A",
+      topCategoryCount: topCategory?.[1] || 0,
+    }
+  }, [filteredNews])
 
   return (
     <main className="min-h-screen bg-gradient-to-br from-slate-950 via-blue-950 to-slate-950">
