@@ -1,126 +1,579 @@
 {
-  "updatedAt": "2025-11-13T08:56:24.721Z",
-  "titles": [
-    "Foto: Perjuangan Tak Kenal Lelah Timnas Amputasi Indonesia Berakhir Gagal Melaju ke Piala Dunia 2026",
-    "Daftar Negara yang Sudah Lolos Piala Dunia 2026",
-    "Timnas Indonesia Harus Bersaing dengan Klub Turki dan China jika Ngebet Tunjuk Timur Kapadze sebagai Pelatih Baru",
-    "Target Realistis Pelatih Baru Timnas Indonesia: Juara FIFA ASEAN Cup, Lolos 8 Besar Piala Asia 2027, dan Mentas di Piala Dunia 2030!",
-    "PSSI Respons Isu Heimir Hallgrimsson, Timur Kapadze, dan Bojan Hodak Masuk Daftar Calon Nakhoda Anyar Timnas Indonesia",
-    "Tetap Gaspol meski Ada FIFA Matchday November 2025, Kevin Diks cs. Jalani Uji Coba Bersama...",
-    "Cristiano Ronaldo Janji Jadi Good Boy Menghadapi Cemoohan Fans Irlandia di Aviva Stadium",
-    "Google Umumkan Project Suncatcher, Mau Taruh Data AI di Luar Angkasa",
-    "Axel Tuanzebe Gugat MU Rp20 Miliar, Tuduh Klub Lalai Tangani Cederanya",
-    "Mampukah Vinicius Menemukan Kembali Sentuhannya saat Membela Timnas Brasil?",
-    "Kemenpora Diminta Tak Pesimistis dengan Peluang Timnas Indonesia U-22 Raih Emas di SEA Gam...",
-    "Model Rambutnya Enggak Sesuai Selera Alex Ferguson, Bintang MU Ini Dilarang Ikuti Latihan ...",
-    "Indonesia Open Aquatic Championships 2025: Renang Bukan Sekadar Kompetisi, tapi Olahraga S...",
-    "Ruben Amorim Perkenalkan Aturan Ketat Tanda Tangan, Pemain MU Wajib Patuh",
-    "Dipimpin Ismed Sofyan, Persma 1960 Lanching Tim dengan Menggelar Laga Seru Melibatkan Per...",
-    "Cerita Adelia Chantika Aulia, Perenang 14 Tahun yang Gemilang di IOAC 2025: Next Targetkan...",
-    "Frenkie de Jong Tegaskan Tak Perlu ke Premier League untuk Buktikan Diri: Impian Saya Seja...",
-    "Son Heung-min Tegaskan Tak Akan Tinggalkan LAFC: Rumor Kembali ke Tottenham Tidak Benar",
-    "BYON Combat Showbiz 6: Aksi Petarung Indonesia vs Malaysia Kembali Hadir di Vidio",
-    "Tak Disangka... Para Pesepak Bola Dunia Ini Ternyata Masih Satu Keluarga: Ada Diogo Dalot ...",
-    "5 Pemain Asing BRI Super League yang Dipanggil Bela Negara di FIFA Matchday November 2025:...",
-    "Paul Scholes Bikin Prediksi Pacuan Gelar Liga Inggris 2025/2026: Juaranya Bukan Arsenal",
-    "7 Pemain dan Eks MU yang Paling Tajir Melintir: Persaingan Ketat Cristiano Ronaldo Vs Davi...",
-    "3 Pemain Abroad Perkuat Garuda Muda! Simak Lengkap Jadwal Timnas Indonesia U-22 vs Mali U-...",
-    "Persib Bandung Kokoh di Puncak Grup G AFC Champions League 2, Frans Putros Makin Percaya D...",
-    "7 Mantan Pemain MU yang Kini Nganggur Tak Punya Klub: Nasibnya Masih Terkatung-katung",
-    "Masa Depan Heimir Hallgrimsson di Timnas Irlandia Ditentukan pada Laga Kontra Portugal dan...",
-    "Hanya 3 Pemain Timnas Indonesia U-22 yang Belum Mendapatkan Menit Bermain di BRI Super Lea...",
-    "3 Bintang Mali U-22 yang Bisa Sulitkan Timnas Indonesia U-22: Pernah Unjuk Gigi di Piala D...",
-    "3 Pemain Kunci Timnas Indonesia U-22 yang Bisa Membumihanguskan Mali pada Laga Uji Coba di...",
-    "Manajemen Persib Bandung Buka Suara soal Isu Bojan Hodak ke Timnas Indonesia",
-    "Heimir Hallgrimsson, Pelatih yang Kabarnya Masuk Bursa Calon Pelatih Timnas Indonesia: Sos...",
-    "Saatnya Unjuk Gigi! Ini Deretan Penggawa Timnas Indonesia U-22 dengan Jam Terbang Tinggi d...",
-    "Prediksi Prancis Vs Ukraina di Kualifikasi Piala Dunia 2026: Les Blues Butuh 3 Poin untuk ...",
-    "Jadwal Lengkap Kualifikasi Piala Dunia 2026 Zona Eropa, 14-16 November 2025",
-    "Daftar Agenda Internasional Negara ASEAN di FIFA Matchday November 2025: Singapura dan Tha...",
-    "Dua Kali Turbulensi Pergantian Pelatih, Pemain Naturalisasi Timnas Indonesia Diyakini Masi...",
-    "Link Live Streaming Indonesia Open Aquatic Championships 2025, Kamis 12 November",
-    "Prediksi Inggris Vs Serbia di Kualifikasi Piala Dunia 2026: Momen Pembuktian Jude Bellingh...",
-    "Liverpool Dapat Angin Segar dalam Perburuan Nico Schlotterbeck",
-    "Prediksi Moldova Vs Italia di Kualifikasi Piala Dunia 2026: Menulis Kisah Berbeda",
-    "Prediksi Kualifikasi Piala Dunia 2026 Zona Eropa Irlandia vs Portugal: Harapan Tuan Rumah ...",
-    "Membedah Kekuatan Timnas Indonesia U-22 Menuju SEA Games 2025: Peluang Mempertahankan Emas...",
-    "Luki Damapoli: Indonesia Sudah di Jalur yang Tepat untuk Pembinaan Atlet Akuatik",
-    "BRI Super League: Arema Fokus Benahi Mental Sebelum Lawan Persebaya",
-    "Eks Gelandang Liverpool Percaya Florian Wirtz Akan Penuhi Potensinya di Inggris",
-    "Pegadaian Championship: Tekuk Persiba, PSS Kembali ke Puncak Klasemen",
-    "PSSI Incar Pelatih Islandia di Piala Dunia 2018 untuk Asuh Timnas Indonesia",
-    "Frans Putros Angkat Suara Soal Isu Bojan Hodak ke Timnas Indonesia: Saya Harap Dia Tetap d...",
-    "Wayne Rooney Kritik Performa Virgil van Dijk: Ada yang Tak Beres di Liverpool",
-    "Tampil Hebat di Piala Dunia U-17 2025, Timnas Indonesia U-17 Punya Masa Depan Cerah, Asal....",
-    "Dari Kolam 15 Meter di Mamuju, Abel Buktikan Semangat Tak Terbatas di Indonesia Open Aquat...",
-    "Ruang Ganti Napoli Tegang, Pemain Tak Suka dengan Metode Latihan Antonio Conte",
-    "Ruben Amorim dan Manajemen MU Terancam Bentrok Pendapat Soal Masa Depan Casemiro",
-    "I Gede Siman Sudartawa Apresiasi Inovasi dan Regenerasi di Indonesia Open Aquatic Champion...",
-    "75 Laga Pertama di Real Madrid: Seberapa Dekat Mbappe dengan Rekor Cristiano Ronaldo?",
-    "5 Pemain Real Madrid Tak Senang dengan Xabi Alonso, Sinyal Ruang Ganti Tak Harmonis",
-    "Segala Informasi yang Perlu Anda Ketahui Mengenai SEA Games 2025: dari Kota Penyelenggara ...",
-    "4 Alasan Mengapa Timnas Indonesia Layak Mencoba Timur Kapadze: Paham Medan Asia, Saatnya B...",
-    "Rochi Putiray Ungkap Pelajaran Kegagalan Timnas Indonesia ke Piala Dunia 2026: Tak Sabar M...",
-    "Presiden World Aquatics Takjub dengan IOAC 2025, Angkat Topi untuk PB Akuatik Indonesia",
-    "Ternyata Ada Peran Pemain MU di Balik Keputusan Frank Lampard Gantung Sepatu",
-    "Foto: Potret Sengit Laga Polo Air di Indonesia Open Aquatic Championships 2025",
-    "WIKA Blak-blakan Terus Rugi Sejak Proyek Whoosh Beroperasi",
-    "Pemulihan Cedera Marc Marquez Berjalan Baik, tetapi Tetap Absen di Seri Penutup MotoGP 202...",
-    "Foto: Presiden Federasi Akuatik Internasional Kunjungi Indonesia Open Aquatic Championship...",
-    "PSSI Akan Evaluasi Nova Arianto setelah Timnas Indonesia U-17 Terhenti di Fase Grup Piala ...",
-    "Mirip Toni Kroos! Wonderkid Hertha BSC Bikin Klub Top Eropa Berebut, dari MU hingga Real M...",
-    "Muhammad Ferarri Menyebut Kemenangan atas Mali akan Sangat Penting Bagi Persiapan Timnas I...",
-    "Foto: Adelia Chantika Tercepat di Nomor 200 Meter Gaya Bebas Putri Indonesia Open Aquatic ...",
-    "Pemerintah Bikin Program SMK Go Global, Fasilitasi Lulusan SMK Bekerja di Jepang hingga Je...",
-    "Data dan Fakta Nova Arianto Dari Piala AFF U-16 2024 Hingga ke Piala Dunia U-17 2025: Jala...",
-    "Momen Presiden World Aquatics Diberikan dan Memakai Jaket Akuatik Indonesia di IOAC 2025",
-    "Kunjungi IOAC 2025, Presiden World Aquatics Promosikan Polo Air 4X4: Bisa Dimainkan di Kol...",
-    "Statistik Total Timnas Indonesia U-17 di Piala Dunia U-17 2025: 3 Gol, 1 Kemenangan Bersej...",
-    "Sumardji Respons Kabar Timur Kapadze Jadi Calon Pelatih Timnas Indonesia: Belum Ada Keputu...",
-    "Kepala BGN Ungkap Total Kejadian Keracunan MBG hingga 12 November 2025",
-    "Pemain Ini Siap Sambut Lionel Messi Berseragam Barcelona Lagi",
-    "Liverpool Jadi Contoh Gagal: Belanja Besar, Performa Malah Anjlok",
-    "Setiap Jengkal Dijual: FIFA Tambah Cuan dari Parkir Piala Dunia 2026, Bayarnya Lebih Mahal...",
-    "Robbie Fowler Sebut Biang Kerok Keterpurukan Liverpool: Mereka Bukan Lagi Favorit Juara",
-    "AC Milan Bidik Joe Gomez, Begini Sikap Liverpool",
-    "Wejangan Ong Kim Swee Agar 2 Young Guns Persik Bisa Masuk Skuad Timnas Indonesia U-22: Jan...",
-    "Marc Marquez Prihatin Pecco Bagnaia Terpuruk di MotoGP 2025: Hati Saya Sakit Melihatnya",
-    "Momen Sumardji Bakar Semangat Garuda Muda: Obat Satu-satunya, Pertahankan Emas di SEA Game...",
-    "Tim Peringkat 210 Dunia, San Marino, Berpeluang Lolos ke Piala Dunia 2026 Berkat Aturan Ba...",
-    "Menaker Beri Update soal Penetapan UMP: Tunggu 2 Pekan Lagi",
-    "Ambisi Ivar Jenner dan Rafael Struick Pertahankan Medali Emas SEA Games untuk Timnas Indon...",
-    "Monchengladbach Mulai Terbiasa Menang, Kevin Diks cs. Diprediksi Terus Melonjak di Klaseme...",
-    "Keluarga Besar Michael Schumacher Berbagi Kabar Haru dan Bahagia",
-    "Liputan6.com Connect Hadir di UI Vokasi: Bahas Strategi Branding dan Gaya Jurnalistik di E...",
-    "MU Ubah Keputusan Terkait Kontrak Casemiro",
-    "Cerita Mauro Zijlstra Belum Tidur ketika Gabung TC Timnas Indonesia U-22 untuk SEA Games 2...",
-    "Timnas Indonesia U-17 Tersingkir dari Piala Dunia U-17 2025: Disorot Media Asing, Hasil ya...",
-    "Alih-Alih Arsenal, Man City Dinilai Lebih Siap Jadi Juara Liga Inggris, Liverpool? Sudah K...",
-    "Terungkap, Calon Pelatih Baru Madura United adalah Debutan Asal Brasil",
-    "Jadwal Lengkap Pekan ke-13 BRI Super League, 20-23 November 2025: Ada Big Match Persebaya Vs Arema",
-    "Performa Sempurna Borneo FC di BRI Super League 2025/2026: Skuad Mumpuni dan Konsisten, Mariano Peralta Sang Nyawa Permainan",
-    "Daftar Pertandingan Persib hingga Akhir 2025: Ada Laga Krusial AFC Champions League Two",
-    "Persijap Jepara Panen Rekor Buruk hingga Tersungkur di Zona Degradasi: Telan 6 Kekalahan Beruntun, Kolektor Kartu Merah Terbanyak",
-    "Manajemen Persib Bandung Buka Suara soal Isu Bojan Hodak ke Timnas Indonesia",
-    "Luar Biasa! Presiden World Aquatics Puji Fasilitas dan Pembinaan Akuatik Indonesia",
-    "4 Gelandang yang Bisa Jadi Target Manchester United pada Bursa Transfer Januari 2026",
-    "Mengenal Luke Xavier Keet, Diaspora Anyar yang Siap Unjuk Gigi di Timnas Indonesia U-22",
-    "Pede! Mauro Zijlstra Siap Tampil di SEA Games 2025, meski Bukan Agenda FIFA",
-    "Sumardji Respons Kabar Timur Kapadze Jadi Calon Pelatih Timnas Indonesia: Belum Ada Keputusan Apa-Apa, Masih Proses",
-    "Rochi Putiray Ungkap Pelajaran Kegagalan Timnas Indonesia ke Piala Dunia 2026: Tak Sabar Melalui Sebuah Proses",
-    "Ruben Amorim dan Manajemen MU Terancam Bentrok Pendapat Soal Masa Depan Casemiro",
-    "Muhammad Ferarri Menyebut Kemenangan atas Mali akan Sangat Penting Bagi Persiapan Timnas Indonesia Menuju SEA Games 2025",
-    "Membedah Kekuatan Timnas Indonesia U-22 Menuju SEA Games 2025: Peluang Mempertahankan Emas Meningkat",
-    "4 Alasan Mengapa Timnas Indonesia Layak Mencoba Timur Kapadze: Paham Medan Asia, Saatnya Berguru dari Uzbekistan",
-    "Timnas Indonesia Harus Bersaing dengan Klub Turki dan China jika Ngebet Tunjuk Timur Kapadze sebagai Pelatih Baru",
-    "Ketertarikan Timnas Indonesia Terancam Bertepuk Sebelah Tangan, Heimir Hallgrimsson Masih Ingin Latih Irlandia hingga Piala Dunia 2026",
-    "Jika Timnas Indonesia U-22 Tumbangkan Timnas Mali U-22, Vietnam dan Thailand Bisa Keder Bersaing di SEA Games 2025",
-    "Target Realistis Pelatih Baru Timnas Indonesia: Juara FIFA ASEAN Cup, Lolos 8 Besar Piala Asia 2027, dan Mentas di Piala Dunia 2030!",
-    "7 Mantan Pemain MU yang Kini Nganggur Tak Punya Klub: Nasibnya Masih Terkatung-katung",
-    "PSSI Incar Pelatih Islandia di Piala Dunia 2018 untuk Asuh Timnas Indonesia",
-    "Robbie Fowler Sebut Biang Kerok Keterpurukan Liverpool: Mereka Bukan Lagi Favorit Juara",
-    "PSSI Respons Isu Heimir Hallgrimsson, Timur Kapadze, dan Bojan Hodak Masuk Daftar Calon Nakhoda Anyar Timnas Indonesia",
-    "5 Pemain Real Madrid Tak Senang dengan Xabi Alonso, Sinyal Ruang Ganti Tak Harmonis",
-    "Hanya 3 Pemain Timnas Indonesia U-22 yang Belum Mendapatkan Menit Bermain di BRI Super League 2025/2026"
+  "updatedAt": "2025-11-13T09:27:31.859Z",
+  "items": [
+    {
+      "title": "Foto: Perjuangan Tak Kenal Lelah Timnas Amputasi Indonesia Berakhir Gagal Melaju ke Piala Dunia 2026",
+      "url": "https://www.bola.com/indonesia/read/6210807/foto-perjuangan-tak-kenal-lelah-timnas-amputasi-indonesia-berakhir-gagal-melaju-ke-piala-dunia-2026?HouseAds&campaign=Timnas_Indonesia_Home__STS1"
+    },
+    {
+      "title": "Daftar Negara yang Sudah Lolos Piala Dunia 2026",
+      "url": "https://www.bola.com/indonesia/read/6180906/daftar-negara-yang-sudah-lolos-piala-dunia-2026?HouseAds&campaign=Timnas_Indonesia_Home__STS1"
+    },
+    {
+      "title": "Timnas Indonesia Harus Bersaing dengan Klub Turki dan China jika Ngebet Tunjuk Timur Kapadze sebagai Pelatih Baru",
+      "url": "https://www.bola.com/indonesia/read/6210640/timnas-indonesia-harus-bersaing-dengan-klub-turki-dan-china-jika-ngebet-tunjuk-timur-kapadze-sebagai-pelatih-baru?HouseAds&campaign=Timnas_Indonesia_Home__STS1"
+    },
+    {
+      "title": "Target Realistis Pelatih Baru Timnas Indonesia: Juara FIFA ASEAN Cup, Lolos 8 Besar Piala Asia 2027, dan Mentas di Piala Dunia 2030!",
+      "url": "https://www.bola.com/indonesia/read/6210242/target-realistis-pelatih-baru-timnas-indonesia-juara-fifa-asean-cup-lolos-8-besar-piala-asia-2027-dan-mentas-di-piala-dunia-2030?HouseAds&campaign=Timnas_Indonesia_Home__STS1"
+    },
+    {
+      "title": "PSSI Respons Isu Heimir Hallgrimsson, Timur Kapadze, dan Bojan Hodak Masuk Daftar Calon Nakhoda Anyar Timnas Indonesia",
+      "url": "https://www.bola.com/indonesia/read/6210605/pssi-respons-isu-heimir-hallgrimsson-timur-kapadze-dan-bojan-hodak-masuk-daftar-calon-nakhoda-anyar-timnas-indonesia?HouseAds&campaign=Timnas_Indonesia_Home__STS1"
+    },
+    {
+      "title": "Toyota, Honda, dan Suzuki Alihkan Fokus ke India, Imbas Pasar China yang Makin Sulit",
+      "url": "https://www.bola.com/news/read/6210723/toyota-honda-dan-suzuki-alihkan-fokus-ke-india-imbas-pasar-china-yang-makin-sulit",
+      "datetime": "2025-11-13T16:20:13+07:00"
+    },
+    {
+      "title": "PSSI Harus Segera Pagari Pemain Diaspora Timnas Indonesia U-17 agar Tak Dibajak Negara Lai...",
+      "url": "https://www.bola.com/indonesia/read/6210698/pssi-harus-segera-pagari-pemain-diaspora-timnas-indonesia-u-17-agar-tak-dibajak-negara-lain",
+      "datetime": "2025-11-13T16:15:44+07:00"
+    },
+    {
+      "title": "Link Live Streaming Timnas Indonesia U-23 vs U-23 Mali, Friendly Match Eksklusif di Vidio",
+      "url": "https://www.bola.com/indonesia/read/6211005/link-live-streaming-timnas-indonesia-u-23-vs-u-23-mali-friendly-match-eksklusif-di-vidio",
+      "datetime": "2025-11-13T16:13:17+07:00"
+    },
+    {
+      "title": "Kalah dari Iran, Timnas Amputasi Indonesia Harus Mengubur Mimpi Mentas di Piala Dunia",
+      "url": "https://enamplus.liputan6.com/indonesia/read/6210994/kalah-dari-iran-timnas-amputasi-indonesia-harus-mengubur-mimpi-mentas-di-piala-dunia",
+      "datetime": "2025-11-13T16:04:13+07:00"
+    },
+    {
+      "title": "Julio Cesar Akui Performa Persib Bandung di Asia Jadi Bukti Liga Indonesia Sudah Naik Kela...",
+      "url": "https://enamplus.liputan6.com/indonesia/read/6210990/julio-cesar-akui-performa-persib-bandung-di-asia-jadi-bukti-liga-indonesia-sudah-naik-kelas",
+      "datetime": "2025-11-13T16:01:17+07:00"
+    },
+    {
+      "title": "MotoGP Thailand Bertahan di Buriram hingga 2031, Redam Isu Formula 1",
+      "url": "https://www.bola.com/moto-gp/read/6210685/motogp-thailand-bertahan-di-buriram-hingga-2031-redam-isu-formula-1",
+      "datetime": "2025-11-13T16:00:38+07:00"
+    },
+    {
+      "title": "Tetap Gaspol meski Ada FIFA Matchday November 2025, Kevin Diks cs. Jalani Uji Coba Bersama...",
+      "url": "https://www.bola.com/indonesia/read/6210670/tetap-gaspol-meski-ada-fifa-matchday-november-2025-kevin-diks-cs-jalani-uji-coba-bersama-monchengladbach",
+      "datetime": "2025-11-13T15:45:24+07:00"
+    },
+    {
+      "title": "Cristiano Ronaldo Janji Jadi Good Boy Menghadapi Cemoohan Fans Irlandia di Aviva Stadium",
+      "url": "https://www.bola.com/dunia/read/6210599/cristiano-ronaldo-janji-jadi-good-boy-menghadapi-cemoohan-fans-irlandia-di-aviva-stadium",
+      "datetime": "2025-11-13T15:30:27+07:00"
+    },
+    {
+      "title": "Google Umumkan Project Suncatcher, Mau Taruh Data AI di Luar Angkasa",
+      "url": "https://www.bola.com/news/read/6210705/google-umumkan-project-suncatcher-mau-taruh-data-ai-di-luar-angkasa",
+      "datetime": "2025-11-13T15:20:38+07:00"
+    },
+    {
+      "title": "Axel Tuanzebe Gugat MU Rp20 Miliar, Tuduh Klub Lalai Tangani Cederanya",
+      "url": "https://www.bola.com/inggris/read/6210654/axel-tuanzebe-gugat-mu-rp20-miliar-tuduh-klub-lalai-tangani-cederanya",
+      "datetime": "2025-11-13T15:15:09+07:00"
+    },
+    {
+      "title": "Mampukah Vinicius Menemukan Kembali Sentuhannya saat Membela Timnas Brasil?",
+      "url": "https://www.bola.com/dunia/read/6210499/mampukah-vinicius-menemukan-kembali-sentuhannya-saat-membela-timnas-brasil",
+      "datetime": "2025-11-13T15:00:12+07:00"
+    },
+    {
+      "title": "Kemenpora Diminta Tak Pesimistis dengan Peluang Timnas Indonesia U-22 Raih Emas di SEA Gam...",
+      "url": "https://www.bola.com/indonesia/read/6210597/kemenpora-diminta-tak-pesimistis-dengan-peluang-timnas-indonesia-u-22-raih-emas-di-sea-games-2025-cabor-bergengsi-wajib-juara",
+      "datetime": "2025-11-13T14:45:42+07:00"
+    },
+    {
+      "title": "Model Rambutnya Enggak Sesuai Selera Alex Ferguson, Bintang MU Ini Dilarang Ikuti Latihan ...",
+      "url": "https://www.bola.com/inggris/read/6210595/model-rambutnya-enggak-sesuai-selera-alex-ferguson-bintang-mu-ini-dilarang-ikuti-latihan-tim",
+      "datetime": "2025-11-13T14:30:27+07:00"
+    },
+    {
+      "title": "Indonesia Open Aquatic Championships 2025: Renang Bukan Sekadar Kompetisi, tapi Olahraga S...",
+      "url": "https://www.bola.com/ragam/read/6210812/indonesia-open-aquatic-championships-2025-renang-bukan-sekadar-kompetisi-tapi-olahraga-seumur-hidup",
+      "datetime": "2025-11-13T14:06:10+07:00"
+    },
+    {
+      "title": "Ruben Amorim Perkenalkan Aturan Ketat Tanda Tangan, Pemain MU Wajib Patuh",
+      "url": "https://www.bola.com/inggris/read/6210564/ruben-amorim-perkenalkan-aturan-ketat-tanda-tangan-pemain-mu-wajib-patuh",
+      "datetime": "2025-11-13T14:00:43+07:00"
+    },
+    {
+      "title": "Dipimpin Ismed Sofyan, Persma 1960 Lanching Tim dengan Menggelar Laga Seru Melibatkan Per...",
+      "url": "https://www.bola.com/indonesia/read/6210733/dipimpin-ismed-sofyan-persma-1960-lanching-tim-dengan-menggelar-laga-seru-melibatkan-persija-glory",
+      "datetime": "2025-11-13T13:15:36+07:00"
+    },
+    {
+      "title": "Cerita Adelia Chantika Aulia, Perenang 14 Tahun yang Gemilang di IOAC 2025: Next Targetkan...",
+      "url": "https://www.bola.com/ragam/read/6210696/cerita-adelia-chantika-aulia-perenang-14-tahun-yang-gemilang-di-ioac-2025-next-targetkan-medali-di-sea-games-thailand",
+      "datetime": "2025-11-13T12:35:58+07:00"
+    },
+    {
+      "title": "Frenkie de Jong Tegaskan Tak Perlu ke Premier League untuk Buktikan Diri: Impian Saya Seja...",
+      "url": "https://www.bola.com/spanyol/read/6210350/frenkie-de-jong-tegaskan-tak-perlu-ke-premier-league-untuk-buktikan-diri-impian-saya-sejak-kecil-adalah-barcelona",
+      "datetime": "2025-11-13T11:30:55+07:00"
+    },
+    {
+      "title": "Son Heung-min Tegaskan Tak Akan Tinggalkan LAFC: Rumor Kembali ke Tottenham Tidak Benar",
+      "url": "https://www.bola.com/dunia/read/6210352/son-heung-min-tegaskan-tak-akan-tinggalkan-lafc-rumor-kembali-ke-tottenham-tidak-benar",
+      "datetime": "2025-11-13T11:15:59+07:00"
+    },
+    {
+      "title": "BYON Combat Showbiz 6: Aksi Petarung Indonesia vs Malaysia Kembali Hadir di Vidio",
+      "url": "https://www.bola.com/ragam/read/6210614/byon-combat-showbiz-6-aksi-petarung-indonesia-vs-malaysia-kembali-hadir-di-vidio",
+      "datetime": "2025-11-13T11:12:41+07:00"
+    },
+    {
+      "title": "Tak Disangka... Para Pesepak Bola Dunia Ini Ternyata Masih Satu Keluarga: Ada Diogo Dalot ...",
+      "url": "https://www.bola.com/dunia/read/6210385/tak-disangka-para-pesepak-bola-dunia-ini-ternyata-masih-satu-keluarga-ada-diogo-dalot-dengan-ruben-amorim",
+      "datetime": "2025-11-13T11:00:12+07:00"
+    },
+    {
+      "title": "5 Pemain Asing BRI Super League yang Dipanggil Bela Negara di FIFA Matchday November 2025:...",
+      "url": "https://www.bola.com/indonesia/read/6210383/5-pemain-asing-bri-super-league-yang-dipanggil-bela-negara-di-fifa-matchday-november-2025-striker-persis-otw-piala-dunia-2026",
+      "datetime": "2025-11-13T10:45:57+07:00"
+    },
+    {
+      "title": "Paul Scholes Bikin Prediksi Pacuan Gelar Liga Inggris 2025/2026: Juaranya Bukan Arsenal",
+      "url": "https://www.bola.com/inggris/read/6210381/paul-scholes-bikin-prediksi-pacuan-gelar-liga-inggris-20252026-juaranya-bukan-arsenal",
+      "datetime": "2025-11-13T10:15:27+07:00"
+    },
+    {
+      "title": "7 Pemain dan Eks MU yang Paling Tajir Melintir: Persaingan Ketat Cristiano Ronaldo Vs Davi...",
+      "url": "https://www.bola.com/dunia/read/6210354/7-pemain-dan-eks-mu-yang-paling-tajir-melintir-persaingan-ketat-cristiano-ronaldo-vs-david-beckham",
+      "datetime": "2025-11-13T10:00:31+07:00"
+    },
+    {
+      "title": "3 Pemain Abroad Perkuat Garuda Muda! Simak Lengkap Jadwal Timnas Indonesia U-22 vs Mali U-...",
+      "url": "https://www.bola.com/indonesia/read/6210348/3-pemain-abroad-perkuat-garuda-muda-simak-lengkap-jadwal-timnas-indonesia-u-22-vs-mali-u-22",
+      "datetime": "2025-11-13T09:45:47+07:00"
+    },
+    {
+      "title": "Persib Bandung Kokoh di Puncak Grup G AFC Champions League 2, Frans Putros Makin Percaya D...",
+      "url": "https://enamplus.liputan6.com/indonesia/read/6210508/persib-bandung-kokoh-di-puncak-grup-g-afc-champions-league-2-frans-putros-makin-percaya-diri",
+      "datetime": "2025-11-13T09:32:57+07:00"
+    },
+    {
+      "title": "7 Mantan Pemain MU yang Kini Nganggur Tak Punya Klub: Nasibnya Masih Terkatung-katung",
+      "url": "https://www.bola.com/inggris/read/6210215/7-mantan-pemain-mu-yang-kini-nganggur-tak-punya-klub-nasibnya-masih-terkatung-katung",
+      "datetime": "2025-11-13T09:30:14+07:00"
+    },
+    {
+      "title": "Masa Depan Heimir Hallgrimsson di Timnas Irlandia Ditentukan pada Laga Kontra Portugal dan...",
+      "url": "https://www.bola.com/indonesia/read/6210458/masa-depan-heimir-hallgrimsson-di-timnas-irlandia-ditentukan-pada-laga-kontra-portugal-dan-hungaria",
+      "datetime": "2025-11-13T09:15:18+07:00"
+    },
+    {
+      "title": "Hanya 3 Pemain Timnas Indonesia U-22 yang Belum Mendapatkan Menit Bermain di BRI Super Lea...",
+      "url": "https://www.bola.com/indonesia/read/6210236/hanya-3-pemain-timnas-indonesia-u-22-yang-belum-mendapatkan-menit-bermain-di-bri-super-league-20252026",
+      "datetime": "2025-11-13T09:00:51+07:00"
+    },
+    {
+      "title": "3 Bintang Mali U-22 yang Bisa Sulitkan Timnas Indonesia U-22: Pernah Unjuk Gigi di Piala D...",
+      "url": "https://www.bola.com/indonesia/read/6210197/3-bintang-mali-u-22-yang-bisa-sulitkan-timnas-indonesia-u-22-pernah-unjuk-gigi-di-piala-dunia-u-17-2023",
+      "datetime": "2025-11-13T08:45:34+07:00"
+    },
+    {
+      "title": "3 Pemain Kunci Timnas Indonesia U-22 yang Bisa Membumihanguskan Mali pada Laga Uji Coba di...",
+      "url": "https://www.bola.com/indonesia/read/6209937/3-pemain-kunci-timnas-indonesia-u-22-yang-bisa-membumihanguskan-mali-pada-laga-uji-coba-di-stadion-pakansari",
+      "datetime": "2025-11-13T08:30:44+07:00"
+    },
+    {
+      "title": "Manajemen Persib Bandung Buka Suara soal Isu Bojan Hodak ke Timnas Indonesia",
+      "url": "https://enamplus.liputan6.com/indonesia/read/6210177/manajemen-persib-bandung-buka-suara-soal-isu-bojan-hodak-ke-timnas-indonesia",
+      "datetime": "2025-11-13T08:20:34+07:00"
+    },
+    {
+      "title": "Heimir Hallgrimsson, Pelatih yang Kabarnya Masuk Bursa Calon Pelatih Timnas Indonesia: Sos...",
+      "url": "https://www.bola.com/indonesia/read/6210430/heimir-hallgrimsson-pelatih-yang-kabarnya-masuk-bursa-calon-pelatih-timnas-indonesia-sosok-unik-yang-melegenda-bersama-islandia",
+      "datetime": "2025-11-13T08:15:53+07:00"
+    },
+    {
+      "title": "Saatnya Unjuk Gigi! Ini Deretan Penggawa Timnas Indonesia U-22 dengan Jam Terbang Tinggi d...",
+      "url": "https://www.bola.com/indonesia/read/6210408/saatnya-unjuk-gigi-ini-deretan-penggawa-timnas-indonesia-u-22-dengan-jam-terbang-tinggi-di-klubnya",
+      "datetime": "2025-11-13T08:00:20+07:00"
+    },
+    {
+      "title": "Prediksi Prancis Vs Ukraina di Kualifikasi Piala Dunia 2026: Les Blues Butuh 3 Poin untuk ...",
+      "url": "https://www.bola.com/dunia/read/6210373/prediksi-prancis-vs-ukraina-di-kualifikasi-piala-dunia-2026-les-blues-butuh-3-poin-untuk-lolos",
+      "datetime": "2025-11-13T07:45:21+07:00"
+    },
+    {
+      "title": "Jadwal Lengkap Kualifikasi Piala Dunia 2026 Zona Eropa, 14-16 November 2025",
+      "url": "https://www.bola.com/dunia/read/6210376/jadwal-lengkap-kualifikasi-piala-dunia-2026-zona-eropa-14-16-november-2025",
+      "datetime": "2025-11-13T07:35:42+07:00"
+    },
+    {
+      "title": "Daftar Agenda Internasional Negara ASEAN di FIFA Matchday November 2025: Singapura dan Tha...",
+      "url": "https://www.bola.com/indonesia/read/6210275/daftar-agenda-internasional-negara-asean-di-fifa-matchday-november-2025-singapura-dan-thailand-padat-timnas-indonesia-menganggur",
+      "datetime": "2025-11-13T07:30:43+07:00"
+    },
+    {
+      "title": "Dua Kali Turbulensi Pergantian Pelatih, Pemain Naturalisasi Timnas Indonesia Diyakini Masi...",
+      "url": "https://www.bola.com/indonesia/read/6210153/dua-kali-turbulensi-pergantian-pelatih-pemain-naturalisasi-timnas-indonesia-diyakini-masih-setia-dan-punya-komitmen-kuat",
+      "datetime": "2025-11-13T07:15:22+07:00"
+    },
+    {
+      "title": "Link Live Streaming Indonesia Open Aquatic Championships 2025, Kamis 12 November",
+      "url": "https://www.bola.com/ragam/read/6210364/link-live-streaming-indonesia-open-aquatic-championships-2025-kamis-12-november",
+      "datetime": "2025-11-13T07:10:38+07:00"
+    },
+    {
+      "title": "Prediksi Inggris Vs Serbia di Kualifikasi Piala Dunia 2026: Momen Pembuktian Jude Bellingh...",
+      "url": "https://www.bola.com/dunia/read/6210412/prediksi-inggris-vs-serbia-di-kualifikasi-piala-dunia-2026-momen-pembuktian-jude-bellingham",
+      "datetime": "2025-11-13T07:00:52+07:00"
+    },
+    {
+      "title": "Liverpool Dapat Angin Segar dalam Perburuan Nico Schlotterbeck",
+      "url": "https://www.bola.com/inggris/read/6210294/liverpool-dapat-angin-segar-dalam-perburuan-nico-schlotterbeck",
+      "datetime": "2025-11-13T06:45:32+07:00"
+    },
+    {
+      "title": "Prediksi Moldova Vs Italia di Kualifikasi Piala Dunia 2026: Menulis Kisah Berbeda",
+      "url": "https://www.bola.com/dunia/read/6210254/prediksi-moldova-vs-italia-di-kualifikasi-piala-dunia-2026-menulis-kisah-berbeda",
+      "datetime": "2025-11-13T06:30:46+07:00"
+    },
+    {
+      "title": "Prediksi Kualifikasi Piala Dunia 2026 Zona Eropa Irlandia vs Portugal: Harapan Tuan Rumah ...",
+      "url": "https://www.bola.com/dunia/read/6210291/prediksi-kualifikasi-piala-dunia-2026-zona-eropa-irlandia-vs-portugal-harapan-tuan-rumah-tipis",
+      "datetime": "2025-11-13T06:15:20+07:00"
+    },
+    {
+      "title": "Membedah Kekuatan Timnas Indonesia U-22 Menuju SEA Games 2025: Peluang Mempertahankan Emas...",
+      "url": "https://www.bola.com/indonesia/read/6210165/membedah-kekuatan-timnas-indonesia-u-22-menuju-sea-games-2025-peluang-mempertahankan-emas-meningkat",
+      "datetime": "2025-11-13T06:00:59+07:00"
+    },
+    {
+      "title": "Luki Damapoli: Indonesia Sudah di Jalur yang Tepat untuk Pembinaan Atlet Akuatik",
+      "url": "https://www.bola.com/ragam/read/6210268/luki-damapoli-indonesia-sudah-di-jalur-yang-tepat-untuk-pembinaan-atlet-akuatik",
+      "datetime": "2025-11-13T05:45:21+07:00"
+    },
+    {
+      "title": "BRI Super League: Arema Fokus Benahi Mental Sebelum Lawan Persebaya",
+      "url": "https://www.bola.com/indonesia/read/6210208/bri-super-league-arema-fokus-benahi-mental-sebelum-lawan-persebaya",
+      "datetime": "2025-11-13T05:30:42+07:00"
+    },
+    {
+      "title": "Eks Gelandang Liverpool Percaya Florian Wirtz Akan Penuhi Potensinya di Inggris",
+      "url": "https://www.bola.com/inggris/read/6210241/eks-gelandang-liverpool-percaya-florian-wirtz-akan-penuhi-potensinya-di-inggris",
+      "datetime": "2025-11-13T05:15:52+07:00"
+    },
+    {
+      "title": "Pegadaian Championship: Tekuk Persiba, PSS Kembali ke Puncak Klasemen",
+      "url": "https://www.bola.com/indonesia/read/6210382/pegadaian-championship-tekuk-persiba-pss-kembali-ke-puncak-klasemen",
+      "datetime": "2025-11-13T05:00:06+07:00"
+    },
+    {
+      "title": "PSSI Incar Pelatih Islandia di Piala Dunia 2018 untuk Asuh Timnas Indonesia",
+      "url": "https://www.bola.com/indonesia/read/6210369/pssi-incar-pelatih-islandia-di-piala-dunia-2018-untuk-asuh-timnas-indonesia",
+      "datetime": "2025-11-12T23:20:36+07:00"
+    },
+    {
+      "title": "Frans Putros Angkat Suara Soal Isu Bojan Hodak ke Timnas Indonesia: Saya Harap Dia Tetap d...",
+      "url": "https://www.bola.com/indonesia/read/6210206/frans-putros-angkat-suara-soal-isu-bojan-hodak-ke-timnas-indonesia-saya-harap-dia-tetap-di-persib",
+      "datetime": "2025-11-12T22:30:56+07:00"
+    },
+    {
+      "title": "Wayne Rooney Kritik Performa Virgil van Dijk: Ada yang Tak Beres di Liverpool",
+      "url": "https://www.bola.com/inggris/read/6209954/wayne-rooney-kritik-performa-virgil-van-dijk-ada-yang-tak-beres-di-liverpool",
+      "datetime": "2025-11-12T22:15:05+07:00"
+    },
+    {
+      "title": "Tampil Hebat di Piala Dunia U-17 2025, Timnas Indonesia U-17 Punya Masa Depan Cerah, Asal....",
+      "url": "https://www.bola.com/indonesia/read/6210160/tampil-hebat-di-piala-dunia-u-17-2025-timnas-indonesia-u-17-punya-masa-depan-cerah-asal",
+      "datetime": "2025-11-12T22:00:58+07:00"
+    },
+    {
+      "title": "Dari Kolam 15 Meter di Mamuju, Abel Buktikan Semangat Tak Terbatas di Indonesia Open Aquat...",
+      "url": "https://www.bola.com/ragam/read/6210244/dari-kolam-15-meter-di-mamuju-abel-buktikan-semangat-tak-terbatas-di-indonesia-open-aquatic-championships-2025",
+      "datetime": "2025-11-12T22:00:07+07:00"
+    },
+    {
+      "title": "Ruang Ganti Napoli Tegang, Pemain Tak Suka dengan Metode Latihan Antonio Conte",
+      "url": "https://www.bola.com/dunia/read/6210157/ruang-ganti-napoli-tegang-pemain-tak-suka-dengan-metode-latihan-antonio-conte",
+      "datetime": "2025-11-12T21:45:51+07:00"
+    },
+    {
+      "title": "Ruben Amorim dan Manajemen MU Terancam Bentrok Pendapat Soal Masa Depan Casemiro",
+      "url": "https://www.bola.com/inggris/read/6210039/ruben-amorim-dan-manajemen-mu-terancam-bentrok-pendapat-soal-masa-depan-casemiro",
+      "datetime": "2025-11-12T21:30:30+07:00"
+    },
+    {
+      "title": "I Gede Siman Sudartawa Apresiasi Inovasi dan Regenerasi di Indonesia Open Aquatic Champion...",
+      "url": "https://www.bola.com/ragam/read/6210189/i-gede-siman-sudartawa-apresiasi-inovasi-dan-regenerasi-di-indonesia-open-aquatic-championships-2025",
+      "datetime": "2025-11-12T21:15:46+07:00"
+    },
+    {
+      "title": "75 Laga Pertama di Real Madrid: Seberapa Dekat Mbappe dengan Rekor Cristiano Ronaldo?",
+      "url": "https://www.bola.com/spanyol/read/6209691/75-laga-pertama-di-real-madrid-seberapa-dekat-mbappe-dengan-rekor-cristiano-ronaldo",
+      "datetime": "2025-11-12T21:00:19+07:00"
+    },
+    {
+      "title": "5 Pemain Real Madrid Tak Senang dengan Xabi Alonso, Sinyal Ruang Ganti Tak Harmonis",
+      "url": "https://www.bola.com/spanyol/read/6210274/5-pemain-real-madrid-tak-senang-dengan-xabi-alonso-sinyal-ruang-ganti-tak-harmonis",
+      "datetime": "2025-11-12T20:50:56+07:00"
+    },
+    {
+      "title": "Segala Informasi yang Perlu Anda Ketahui Mengenai SEA Games 2025: dari Kota Penyelenggara ...",
+      "url": "https://www.bola.com/ragam/read/6209628/segala-informasi-yang-perlu-anda-ketahui-mengenai-sea-games-2025-dari-kota-penyelenggara-hingga-total-cabor",
+      "datetime": "2025-11-12T20:45:20+07:00"
+    },
+    {
+      "title": "4 Alasan Mengapa Timnas Indonesia Layak Mencoba Timur Kapadze: Paham Medan Asia, Saatnya B...",
+      "url": "https://www.bola.com/indonesia/read/6209966/4-alasan-mengapa-timnas-indonesia-layak-mencoba-timur-kapadze-paham-medan-asia-saatnya-berguru-dari-uzbekistan",
+      "datetime": "2025-11-12T20:15:44+07:00"
+    },
+    {
+      "title": "Rochi Putiray Ungkap Pelajaran Kegagalan Timnas Indonesia ke Piala Dunia 2026: Tak Sabar M...",
+      "url": "https://www.bola.com/indonesia/read/6210043/rochi-putiray-ungkap-pelajaran-kegagalan-timnas-indonesia-ke-piala-dunia-2026-tak-sabar-melalui-sebuah-proses",
+      "datetime": "2025-11-12T20:00:28+07:00"
+    },
+    {
+      "title": "Presiden World Aquatics Takjub dengan IOAC 2025, Angkat Topi untuk PB Akuatik Indonesia",
+      "url": "https://www.bola.com/ragam/read/6210186/presiden-world-aquatics-takjub-dengan-ioac-2025-angkat-topi-untuk-pb-akuatik-indonesia",
+      "datetime": "2025-11-12T19:45:32+07:00"
+    },
+    {
+      "title": "Ternyata Ada Peran Pemain MU di Balik Keputusan Frank Lampard Gantung Sepatu",
+      "url": "https://www.bola.com/inggris/read/6210040/ternyata-ada-peran-pemain-mu-di-balik-keputusan-frank-lampard-gantung-sepatu",
+      "datetime": "2025-11-12T19:30:42+07:00"
+    },
+    {
+      "title": "Foto: Potret Sengit Laga Polo Air di Indonesia Open Aquatic Championships 2025",
+      "url": "https://www.bola.com/ragam/read/6210235/foto-potret-sengit-laga-polo-air-di-indonesia-open-aquatic-championships-2025",
+      "datetime": "2025-11-12T19:23:03+07:00"
+    },
+    {
+      "title": "WIKA Blak-blakan Terus Rugi Sejak Proyek Whoosh Beroperasi",
+      "url": "https://www.bola.com/news/read/6210284/wika-blak-blakan-terus-rugi-sejak-proyek-whoosh-beroperasi",
+      "datetime": "2025-11-12T19:20:13+07:00"
+    },
+    {
+      "title": "Pemulihan Cedera Marc Marquez Berjalan Baik, tetapi Tetap Absen di Seri Penutup MotoGP 202...",
+      "url": "https://www.bola.com/moto-gp/read/6210002/pemulihan-cedera-marc-marquez-berjalan-baik-tetapi-tetap-absen-di-seri-penutup-motogp-2025",
+      "datetime": "2025-11-12T19:15:36+07:00"
+    },
+    {
+      "title": "Foto: Presiden Federasi Akuatik Internasional Kunjungi Indonesia Open Aquatic Championship...",
+      "url": "https://www.bola.com/ragam/read/6210211/foto-presiden-federasi-akuatik-internasional-kunjungi-indonesia-open-aquatic-championships-2025",
+      "datetime": "2025-11-12T19:03:03+07:00"
+    },
+    {
+      "title": "PSSI Akan Evaluasi Nova Arianto setelah Timnas Indonesia U-17 Terhenti di Fase Grup Piala ...",
+      "url": "https://www.bola.com/indonesia/read/6210075/pssi-akan-evaluasi-nova-arianto-setelah-timnas-indonesia-u-17-terhenti-di-fase-grup-piala-dunia-u-17-2025",
+      "datetime": "2025-11-12T19:00:40+07:00"
+    },
+    {
+      "title": "Mirip Toni Kroos! Wonderkid Hertha BSC Bikin Klub Top Eropa Berebut, dari MU hingga Real M...",
+      "url": "https://www.bola.com/dunia/read/6210000/mirip-toni-kroos-wonderkid-hertha-bsc-bikin-klub-top-eropa-berebut-dari-mu-hingga-real-madrid",
+      "datetime": "2025-11-12T18:45:40+07:00"
+    },
+    {
+      "title": "Muhammad Ferarri Menyebut Kemenangan atas Mali akan Sangat Penting Bagi Persiapan Timnas I...",
+      "url": "https://www.bola.com/indonesia/read/6210083/muhammad-ferarri-menyebut-kemenangan-atas-mali-akan-sangat-penting-bagi-persiapan-timnas-indonesia-menuju-sea-games-2025",
+      "datetime": "2025-11-12T18:30:38+07:00"
+    },
+    {
+      "title": "Foto: Adelia Chantika Tercepat di Nomor 200 Meter Gaya Bebas Putri Indonesia Open Aquatic ...",
+      "url": "https://www.bola.com/ragam/read/6210170/foto-adelia-chantika-tercepat-di-nomor-200-meter-gaya-bebas-putri-indonesia-open-aquatic-championships-2025",
+      "datetime": "2025-11-12T18:27:03+07:00"
+    },
+    {
+      "title": "Pemerintah Bikin Program SMK Go Global, Fasilitasi Lulusan SMK Bekerja di Jepang hingga Je...",
+      "url": "https://www.bola.com/news/read/6210106/pemerintah-bikin-program-smk-go-global-fasilitasi-lulusan-smk-bekerja-di-jepang-hingga-jerman",
+      "datetime": "2025-11-12T18:20:15+07:00"
+    },
+    {
+      "title": "Data dan Fakta Nova Arianto Dari Piala AFF U-16 2024 Hingga ke Piala Dunia U-17 2025: Jala...",
+      "url": "https://www.bola.com/indonesia/read/6210147/data-dan-fakta-nova-arianto-dari-piala-aff-u-16-2024-hingga-ke-piala-dunia-u-17-2025-jalan-panjang-tanpa-trofi-pantas-promosi",
+      "datetime": "2025-11-12T18:15:37+07:00"
+    },
+    {
+      "title": "Momen Presiden World Aquatics Diberikan dan Memakai Jaket Akuatik Indonesia di IOAC 2025",
+      "url": "https://www.bola.com/ragam/read/6210135/momen-presiden-world-aquatics-diberikan-dan-memakai-jaket-akuatik-indonesia-di-ioac-2025",
+      "datetime": "2025-11-12T18:00:03+07:00"
+    },
+    {
+      "title": "Kunjungi IOAC 2025, Presiden World Aquatics Promosikan Polo Air 4X4: Bisa Dimainkan di Kol...",
+      "url": "https://www.bola.com/ragam/read/6210129/kunjungi-ioac-2025-presiden-world-aquatics-promosikan-polo-air-4x4-bisa-dimainkan-di-kolam-renang-pantai-sungai-hingga-danau",
+      "datetime": "2025-11-12T17:45:21+07:00"
+    },
+    {
+      "title": "Statistik Total Timnas Indonesia U-17 di Piala Dunia U-17 2025: 3 Gol, 1 Kemenangan Bersej...",
+      "url": "https://www.bola.com/indonesia/read/6209861/statistik-total-timnas-indonesia-u-17-di-piala-dunia-u-17-2025-3-gol-1-kemenangan-bersejarah",
+      "datetime": "2025-11-12T17:30:34+07:00"
+    },
+    {
+      "title": "Sumardji Respons Kabar Timur Kapadze Jadi Calon Pelatih Timnas Indonesia: Belum Ada Keputu...",
+      "url": "https://www.bola.com/indonesia/read/6210104/sumardji-respons-kabar-timur-kapadze-jadi-calon-pelatih-timnas-indonesia-belum-ada-keputusan-apa-apa-masih-proses",
+      "datetime": "2025-11-12T17:22:37+07:00"
+    },
+    {
+      "title": "Kepala BGN Ungkap Total Kejadian Keracunan MBG hingga 12 November 2025",
+      "url": "https://www.bola.com/news/read/6209900/kepala-bgn-ungkap-total-kejadian-keracunan-mbg-hingga-12-november-2025",
+      "datetime": "2025-11-12T17:20:33+07:00"
+    },
+    {
+      "title": "Pemain Ini Siap Sambut Lionel Messi Berseragam Barcelona Lagi",
+      "url": "https://www.bola.com/dunia/read/6209895/pemain-ini-siap-sambut-lionel-messi-berseragam-barcelona-lagi",
+      "datetime": "2025-11-12T17:15:40+07:00"
+    },
+    {
+      "title": "Liverpool Jadi Contoh Gagal: Belanja Besar, Performa Malah Anjlok",
+      "url": "https://www.bola.com/inggris/read/6209846/liverpool-jadi-contoh-gagal-belanja-besar-performa-malah-anjlok",
+      "datetime": "2025-11-12T17:00:25+07:00"
+    },
+    {
+      "title": "Setiap Jengkal Dijual: FIFA Tambah Cuan dari Parkir Piala Dunia 2026, Bayarnya Lebih Mahal...",
+      "url": "https://www.bola.com/dunia/read/6209941/setiap-jengkal-dijual-fifa-tambah-cuan-dari-parkir-piala-dunia-2026-bayarnya-lebih-mahal-dari-tiket-pertandingan",
+      "datetime": "2025-11-12T16:45:18+07:00"
+    },
+    {
+      "title": "Robbie Fowler Sebut Biang Kerok Keterpurukan Liverpool: Mereka Bukan Lagi Favorit Juara",
+      "url": "https://www.bola.com/inggris/read/6209805/robbie-fowler-sebut-biang-kerok-keterpurukan-liverpool-mereka-bukan-lagi-favorit-juara",
+      "datetime": "2025-11-12T16:30:27+07:00"
+    },
+    {
+      "title": "AC Milan Bidik Joe Gomez, Begini Sikap Liverpool",
+      "url": "https://www.bola.com/inggris/read/6209795/ac-milan-bidik-joe-gomez-begini-sikap-liverpool",
+      "datetime": "2025-11-12T16:15:13+07:00"
+    },
+    {
+      "title": "Wejangan Ong Kim Swee Agar 2 Young Guns Persik Bisa Masuk Skuad Timnas Indonesia U-22: Jan...",
+      "url": "https://www.bola.com/indonesia/read/6209794/wejangan-ong-kim-swee-agar-2-young-guns-persik-bisa-masuk-skuad-timnas-indonesia-u-22-jangan-pikirkan-hal-hal-tak-penting",
+      "datetime": "2025-11-12T16:00:15+07:00"
+    },
+    {
+      "title": "Marc Marquez Prihatin Pecco Bagnaia Terpuruk di MotoGP 2025: Hati Saya Sakit Melihatnya",
+      "url": "https://www.bola.com/moto-gp/read/6209790/marc-marquez-prihatin-pecco-bagnaia-terpuruk-di-motogp-2025-hati-saya-sakit-melihatnya",
+      "datetime": "2025-11-12T15:45:15+07:00"
+    },
+    {
+      "title": "Momen Sumardji Bakar Semangat Garuda Muda: Obat Satu-satunya, Pertahankan Emas di SEA Game...",
+      "url": "https://enamplus.liputan6.com/indonesia/read/6209989/momen-sumardji-bakar-semangat-garuda-muda-obat-satu-satunya-pertahankan-emas-di-sea-games-2025",
+      "datetime": "2025-11-12T15:41:08+07:00"
+    },
+    {
+      "title": "Tim Peringkat 210 Dunia, San Marino, Berpeluang Lolos ke Piala Dunia 2026 Berkat Aturan Ba...",
+      "url": "https://www.bola.com/dunia/read/6209786/tim-peringkat-210-dunia-san-marino-berpeluang-lolos-ke-piala-dunia-2026-berkat-aturan-baru-fifa",
+      "datetime": "2025-11-12T15:30:39+07:00"
+    },
+    {
+      "title": "Menaker Beri Update soal Penetapan UMP: Tunggu 2 Pekan Lagi",
+      "url": "https://www.bola.com/news/read/6209877/menaker-beri-update-soal-penetapan-ump-tunggu-2-pekan-lagi",
+      "datetime": "2025-11-12T15:20:15+07:00"
+    },
+    {
+      "title": "Ambisi Ivar Jenner dan Rafael Struick Pertahankan Medali Emas SEA Games untuk Timnas Indon...",
+      "url": "https://www.bola.com/indonesia/read/6209729/ambisi-ivar-jenner-dan-rafael-struick-pertahankan-medali-emas-sea-games-untuk-timnas-indonesia-u-22-ayo-kita-kejar",
+      "datetime": "2025-11-12T15:15:47+07:00"
+    },
+    {
+      "title": "Monchengladbach Mulai Terbiasa Menang, Kevin Diks cs. Diprediksi Terus Melonjak di Klaseme...",
+      "url": "https://www.bola.com/dunia/read/6209647/monchengladbach-mulai-terbiasa-menang-kevin-diks-cs-diprediksi-terus-melonjak-di-klasemen-bundesliga",
+      "datetime": "2025-11-12T15:00:15+07:00"
+    },
+    {
+      "title": "Terungkap, Calon Pelatih Baru Madura United adalah Debutan Asal Brasil",
+      "url": "https://www.bola.com/indonesia/read/6208655/terungkap-calon-pelatih-baru-madura-united-adalah-debutan-asal-brasil?HouseAds&campaign=Super_League_STS2"
+    },
+    {
+      "title": "Jadwal Lengkap Pekan ke-13 BRI Super League, 20-23 November 2025: Ada Big Match Persebaya Vs Arema",
+      "url": "https://www.bola.com/indonesia/read/6208598/jadwal-lengkap-pekan-ke-13-bri-super-league-20-23-november-2025-ada-big-match-persebaya-vs-arema?HouseAds&campaign=Super_League_STS2"
+    },
+    {
+      "title": "Performa Sempurna Borneo FC di BRI Super League 2025/2026: Skuad Mumpuni dan Konsisten, Mariano Peralta Sang Nyawa Permainan",
+      "url": "https://www.bola.com/indonesia/read/6208707/performa-sempurna-borneo-fc-di-bri-super-league-20252026-skuad-mumpuni-dan-konsisten-mariano-peralta-sang-nyawa-permainan?HouseAds&campaign=Super_League_STS2"
+    },
+    {
+      "title": "Daftar Pertandingan Persib hingga Akhir 2025: Ada Laga Krusial AFC Champions League Two",
+      "url": "https://www.bola.com/indonesia/read/6208478/daftar-pertandingan-persib-hingga-akhir-2025-ada-laga-krusial-afc-champions-league-two?HouseAds&campaign=Super_League_STS2"
+    },
+    {
+      "title": "Persijap Jepara Panen Rekor Buruk hingga Tersungkur di Zona Degradasi: Telan 6 Kekalahan Beruntun, Kolektor Kartu Merah Terbanyak",
+      "url": "https://www.bola.com/indonesia/read/6207842/persijap-jepara-panen-rekor-buruk-hingga-tersungkur-di-zona-degradasi-telan-6-kekalahan-beruntun-kolektor-kartu-merah-terbanyak?HouseAds&campaign=Super_League_STS2"
+    },
+    {
+      "title": "Manajemen Persib Bandung Buka Suara soal Isu Bojan Hodak ke Timnas Indonesia",
+      "url": "https://enamplus.liputan6.com/indonesia/read/6210177/manajemen-persib-bandung-buka-suara-soal-isu-bojan-hodak-ke-timnas-indonesia?HouseAds&campaign=BeritaVideo_Home_STS3"
+    },
+    {
+      "title": "Luar Biasa! Presiden World Aquatics Puji Fasilitas dan Pembinaan Akuatik Indonesia",
+      "url": "https://enamplus.liputan6.com/ragam/read/6210333/luar-biasa-presiden-world-aquatics-puji-fasilitas-dan-pembinaan-akuatik-indonesia?HouseAds&campaign=BeritaVideo_Home_STS3"
+    },
+    {
+      "title": "4 Gelandang yang Bisa Jadi Target Manchester United pada Bursa Transfer Januari 2026",
+      "url": "https://enamplus.liputan6.com/inggris/read/6210051/4-gelandang-yang-bisa-jadi-target-manchester-united-pada-bursa-transfer-januari-2026?HouseAds&campaign=BeritaVideo_Home_STS3"
+    },
+    {
+      "title": "Mengenal Luke Xavier Keet, Diaspora Anyar yang Siap Unjuk Gigi di Timnas Indonesia U-22",
+      "url": "https://enamplus.liputan6.com/indonesia/read/6209946/mengenal-luke-xavier-keet-diaspora-anyar-yang-siap-unjuk-gigi-di-timnas-indonesia-u-22?HouseAds&campaign=BeritaVideo_Home_STS3"
+    },
+    {
+      "title": "Pede! Mauro Zijlstra Siap Tampil di SEA Games 2025, meski Bukan Agenda FIFA",
+      "url": "https://enamplus.liputan6.com/indonesia/read/6209757/pede-mauro-zijlstra-siap-tampil-di-sea-games-2025-meski-bukan-agenda-fifa?HouseAds&campaign=BeritaVideo_Home_STS3"
+    },
+    {
+      "title": "Sumardji Respons Kabar Timur Kapadze Jadi Calon Pelatih Timnas Indonesia: Belum Ada Keputusan Apa-Apa, Masih Proses",
+      "url": "https://www.bola.com/indonesia/read/6210104/sumardji-respons-kabar-timur-kapadze-jadi-calon-pelatih-timnas-indonesia-belum-ada-keputusan-apa-apa-masih-proses"
+    },
+    {
+      "title": "Rochi Putiray Ungkap Pelajaran Kegagalan Timnas Indonesia ke Piala Dunia 2026: Tak Sabar Melalui Sebuah Proses",
+      "url": "https://www.bola.com/indonesia/read/6210043/rochi-putiray-ungkap-pelajaran-kegagalan-timnas-indonesia-ke-piala-dunia-2026-tak-sabar-melalui-sebuah-proses"
+    },
+    {
+      "title": "Ruben Amorim dan Manajemen MU Terancam Bentrok Pendapat Soal Masa Depan Casemiro",
+      "url": "https://www.bola.com/inggris/read/6210039/ruben-amorim-dan-manajemen-mu-terancam-bentrok-pendapat-soal-masa-depan-casemiro"
+    },
+    {
+      "title": "Muhammad Ferarri Menyebut Kemenangan atas Mali akan Sangat Penting Bagi Persiapan Timnas Indonesia Menuju SEA Games 2025",
+      "url": "https://www.bola.com/indonesia/read/6210083/muhammad-ferarri-menyebut-kemenangan-atas-mali-akan-sangat-penting-bagi-persiapan-timnas-indonesia-menuju-sea-games-2025"
+    },
+    {
+      "title": "Membedah Kekuatan Timnas Indonesia U-22 Menuju SEA Games 2025: Peluang Mempertahankan Emas Meningkat",
+      "url": "https://www.bola.com/indonesia/read/6210165/membedah-kekuatan-timnas-indonesia-u-22-menuju-sea-games-2025-peluang-mempertahankan-emas-meningkat"
+    },
+    {
+      "title": "4 Alasan Mengapa Timnas Indonesia Layak Mencoba Timur Kapadze: Paham Medan Asia, Saatnya Berguru dari Uzbekistan",
+      "url": "https://www.bola.com/indonesia/read/6209966/4-alasan-mengapa-timnas-indonesia-layak-mencoba-timur-kapadze-paham-medan-asia-saatnya-berguru-dari-uzbekistan"
+    },
+    {
+      "title": "Timnas Indonesia Harus Bersaing dengan Klub Turki dan China jika Ngebet Tunjuk Timur Kapadze sebagai Pelatih Baru",
+      "url": "https://www.bola.com/indonesia/read/6210640/timnas-indonesia-harus-bersaing-dengan-klub-turki-dan-china-jika-ngebet-tunjuk-timur-kapadze-sebagai-pelatih-baru"
+    },
+    {
+      "title": "Ketertarikan Timnas Indonesia Terancam Bertepuk Sebelah Tangan, Heimir Hallgrimsson Masih Ingin Latih Irlandia hingga Piala Dunia 2026",
+      "url": "https://www.bola.com/indonesia/read/6210540/ketertarikan-timnas-indonesia-terancam-bertepuk-sebelah-tangan-heimir-hallgrimsson-masih-ingin-latih-irlandia-hingga-piala-dunia-2026"
+    },
+    {
+      "title": "Jika Timnas Indonesia U-22 Tumbangkan Timnas Mali U-22, Vietnam dan Thailand Bisa Keder Bersaing di SEA Games 2025",
+      "url": "https://www.bola.com/indonesia/read/6210560/jika-timnas-indonesia-u-22-tumbangkan-timnas-mali-u-22-vietnam-dan-thailand-bisa-keder-bersaing-di-sea-games-2025"
+    },
+    {
+      "title": "Target Realistis Pelatih Baru Timnas Indonesia: Juara FIFA ASEAN Cup, Lolos 8 Besar Piala Asia 2027, dan Mentas di Piala Dunia 2030!",
+      "url": "https://www.bola.com/indonesia/read/6210242/target-realistis-pelatih-baru-timnas-indonesia-juara-fifa-asean-cup-lolos-8-besar-piala-asia-2027-dan-mentas-di-piala-dunia-2030"
+    },
+    {
+      "title": "7 Mantan Pemain MU yang Kini Nganggur Tak Punya Klub: Nasibnya Masih Terkatung-katung",
+      "url": "https://www.bola.com/inggris/read/6210215/7-mantan-pemain-mu-yang-kini-nganggur-tak-punya-klub-nasibnya-masih-terkatung-katung"
+    },
+    {
+      "title": "PSSI Incar Pelatih Islandia di Piala Dunia 2018 untuk Asuh Timnas Indonesia",
+      "url": "https://www.bola.com/indonesia/read/6210369/pssi-incar-pelatih-islandia-di-piala-dunia-2018-untuk-asuh-timnas-indonesia"
+    },
+    {
+      "title": "Robbie Fowler Sebut Biang Kerok Keterpurukan Liverpool: Mereka Bukan Lagi Favorit Juara",
+      "url": "https://www.bola.com/inggris/read/6209805/robbie-fowler-sebut-biang-kerok-keterpurukan-liverpool-mereka-bukan-lagi-favorit-juara"
+    },
+    {
+      "title": "PSSI Respons Isu Heimir Hallgrimsson, Timur Kapadze, dan Bojan Hodak Masuk Daftar Calon Nakhoda Anyar Timnas Indonesia",
+      "url": "https://www.bola.com/indonesia/read/6210605/pssi-respons-isu-heimir-hallgrimsson-timur-kapadze-dan-bojan-hodak-masuk-daftar-calon-nakhoda-anyar-timnas-indonesia"
+    },
+    {
+      "title": "5 Pemain Real Madrid Tak Senang dengan Xabi Alonso, Sinyal Ruang Ganti Tak Harmonis",
+      "url": "https://www.bola.com/spanyol/read/6210274/5-pemain-real-madrid-tak-senang-dengan-xabi-alonso-sinyal-ruang-ganti-tak-harmonis"
+    },
+    {
+      "title": "Hanya 3 Pemain Timnas Indonesia U-22 yang Belum Mendapatkan Menit Bermain di BRI Super League 2025/2026",
+      "url": "https://www.bola.com/indonesia/read/6210236/hanya-3-pemain-timnas-indonesia-u-22-yang-belum-mendapatkan-menit-bermain-di-bri-super-league-20252026"
+    }
   ]
 }
