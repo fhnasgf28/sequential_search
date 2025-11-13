@@ -16,7 +16,54 @@ export default function HomePage() {
   } | null>(null)
   const [isSearching, setIsSearching] = useState(false)
 
-  const allNews = useMemo(() => generateMockNews(), [])
+  // start with static/local data, then try to load scraped titles from server
+  const [allNews, setAllNews] = useState(() => generateMockNews())
+
+  useEffect(() => {
+    let mounted = true
+    async function loadScraped() {
+      try {
+        const res = await fetch("/api/scraped-news")
+        if (!res.ok) return
+        const data = await res.json()
+        const titles: string[] = Array.isArray(data?.titles) ? data.titles : []
+        if (mounted && titles.length > 0) {
+          // map scraped titles to same NewsItem shape used by UI
+          const categories = ["Sepak Bola", "Basket", "Tenis", "F1", "MMA", "Bulu Tangkis"]
+          const excerpts = [
+            "Pemain bintang menunjukkan performa luar biasa dalam pertandingan yang menghibur.",
+            "Kemenangan besar membawa tim ke posisi teratas klasemen.",
+            "Performa spektakuler dari atlet membuat fans terpesona.",
+            "Drama menarik terjadi di detik-detik akhir pertandingan.",
+            "Rekor baru tercipta dalam sejarah kompetisi ini.",
+            "Tim berhasil pulih setelah mengalami periode sulit.",
+            "Strategi baru terbukti efektif dalam pertandingan kali ini.",
+            "Penonton merasa puas dengan pertunjukan tim kesayangan.",
+          ]
+
+          const mapped = titles.slice(0, 200).map((t, idx) => ({
+            id: idx + 1,
+            title: t,
+            category: categories[Math.floor(Math.random() * categories.length)],
+            date: new Date(Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000).toLocaleDateString("id-ID", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            }),
+            excerpt: excerpts[Math.floor(Math.random() * excerpts.length)],
+            image: `/placeholder.svg?height=400&width=600&query=sports+news+${idx}`,
+          }))
+          setAllNews(mapped)
+        }
+      } catch {
+        // ignore and keep static data
+      }
+    }
+    loadScraped()
+    return () => {
+      mounted = false
+    }
+  }, [])
 
   // compute filtered results + timing in a pure memo (no setState here)
   const searchResult = useMemo(() => {
