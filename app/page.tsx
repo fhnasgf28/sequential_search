@@ -42,29 +42,29 @@ export default function HomePage() {
            ]
  
           const mapped = items.slice(0, 200).map((it, idx) => {
-            // format date from scraped datetime if available, else random fallback
-            let dateStr = new Date(Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000).toLocaleDateString("id-ID", {
-              year: "numeric",
-              month: "long",
-              day: "numeric",
-            })
-            if (it?.datetime) {
-              const d = new Date(it.datetime)
-              if (!isNaN(d.getTime())) {
-                dateStr = d.toLocaleString("id-ID", { year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit" })
-              }
-            }
-
-            return {
-              id: idx + 1,
-              title: it.title,
-               category: categories[Math.floor(Math.random() * categories.length)],
-              date: dateStr,
-              excerpt: it.snippet || excerpts[Math.floor(Math.random() * excerpts.length)],
-              image: `/placeholder.svg?height=400&width=600&query=sports+news+${idx}`,
-              url: it.url,
-            }
-          })
+             // format date from scraped datetime if available, else random fallback
+             let dateStr = new Date(Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000).toLocaleDateString("id-ID", {
+               year: "numeric",
+               month: "long",
+               day: "numeric",
+             })
+             if (it?.datetime) {
+               const d = new Date(it.datetime)
+               if (!isNaN(d.getTime())) {
+                 dateStr = d.toLocaleString("id-ID", { year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit" })
+               }
+             }
+ 
+             return {
+               id: idx + 1,
+               title: it.title,
+               category: it.category,
+               date: dateStr,
+               excerpt: it.snippet || excerpts[Math.floor(Math.random() * excerpts.length)],
+               image: it.image || `/placeholder.svg?height=400&width=600&query=sports+news+${idx}`,
+               url: it.url,
+             }
+           })
            setAllNews(mapped)
          }
        } catch {
@@ -91,7 +91,8 @@ export default function HomePage() {
     for (let i = 0; i < allNews.length; i++) {
       itemsChecked++
       const newsItem = allNews[i]
-      if (newsItem.title.toLowerCase().includes(query) || newsItem.category.toLowerCase().includes(query)) {
+      const cat = (newsItem.category || "").toLowerCase()
+      if (newsItem.title.toLowerCase().includes(query) || cat.includes(query)) {
         results.push(newsItem)
       }
     }
@@ -123,7 +124,8 @@ export default function HomePage() {
   const stats = useMemo(() => {
     const categories = new Map<string, number>()
     filteredNews.forEach((news) => {
-      categories.set(news.category, (categories.get(news.category) || 0) + 1)
+      const cat = news.category || "Lainnya"
+      categories.set(cat, (categories.get(cat) || 0) + 1)
     })
 
     const topCategory = Array.from(categories.entries()).sort((a, b) => b[1] - a[1])[0]

@@ -53,10 +53,11 @@ export function generateMockNews(): NewsItem[] {
     "Penonton merasa puas dengan pertunjukan tim kesayangan.",
   ]
 
+  // deterministic category assignment (round-robin) instead of random
   return newsTitles.map((title, idx) => ({
     id: idx + 1,
     title,
-    category: categories[Math.floor(Math.random() * categories.length)],
+    category: categories[idx % categories.length],
     date: new Date(Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000).toLocaleDateString("id-ID", {
       year: "numeric",
       month: "long",

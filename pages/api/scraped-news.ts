@@ -3,7 +3,7 @@ import fs from "fs/promises"
 import path from "path"
 import { scrapeBola } from "@/utils/scrapeBola"
 
-type ScrapedItem = { title: string; url?: string; datetime?: string; snippet?: string }
+type ScrapedItem = { title: string; url?: string; datetime?: string; snippet?: string; image?: string; category?: string }
 type Out = { items: ScrapedItem[]; updatedAt: string | null; fromCache: boolean; error?: string }
 
 export default async function handler(req: NextApiRequest, res: NextApiResponse<Out>) {
@@ -48,6 +48,8 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
       url: it.url,
       datetime: it.datetime,
       snippet: it.snippet,
+      image: it.image, // include image from scraper
+      category: it.category, // include category if scraper provided
     })).filter(Boolean)
 
     if (items.length > 0) {
