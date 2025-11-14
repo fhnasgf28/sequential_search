@@ -50,9 +50,20 @@ export default function NewsCard({ news, searchQuery }: NewsCardProps) {
 
         {/* Footer */}
         <div className="flex items-center justify-end pt-4 mt-auto border-t border-slate-700">
-          <button className="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 hover:from-blue-500/40 hover:to-cyan-500/40 border border-blue-500/30 rounded-lg text-xs font-medium text-cyan-400 transition-all duration-300">
-            Baca
-          </button>
+          {news.url ? (
+            <a
+              href={news.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 hover:from-blue-500/40 hover:to-cyan-500/40 border border-blue-500/30 rounded-lg text-xs font-medium text-cyan-400 transition-all duration-300"
+            >
+              Baca
+            </a>
+          ) : (
+            <button className="px-3 py-1 bg-gradient-to-r from-blue-500/20 to-cyan-500/20 hover:from-blue-500/40 hover:to-cyan-500/40 border border-blue-500/30 rounded-lg text-xs font-medium text-cyan-400 transition-all duration-300">
+              Baca
+            </button>
+          )}
         </div>
       </div>
     </div>

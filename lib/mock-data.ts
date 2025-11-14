@@ -5,6 +5,7 @@ export interface NewsItem {
   date: string
   excerpt: string
   image: string
+  url?: string
 }
 
 export function generateMockNews(): NewsItem[] {
@@ -63,5 +64,6 @@ export function generateMockNews(): NewsItem[] {
     }),
     excerpt: excerpts[Math.floor(Math.random() * excerpts.length)],
     image: `/placeholder.svg?height=400&width=600&query=sports+news+${idx}`,
+    url: undefined,
   }))
 }
