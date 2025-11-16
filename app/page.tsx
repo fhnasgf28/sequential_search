@@ -9,6 +9,7 @@ import { generateMockNews } from "@/lib/mock-data"
 
 export default function HomePage() {
   const [searchQuery, setSearchQuery] = useState("")
+  const [categoryFilter, setCategoryFilter] = useState("All")
   const [searchStats, setSearchStats] = useState<{
     time: number
     itemsChecked: number
@@ -58,7 +59,8 @@ export default function HomePage() {
              return {
                id: idx + 1,
                title: it.title,
-               category: it.category,
+               // ensure category is always a string (fallback "Lainnya")
+               category: it.category || "Lainnya",
                date: dateStr,
                excerpt: it.snippet || excerpts[Math.floor(Math.random() * excerpts.length)],
                image: it.image || `/placeholder.svg?height=400&width=600&query=sports+news+${idx}`,
@@ -76,11 +78,20 @@ export default function HomePage() {
        mounted = false
      }
    }, [])
-
+ 
+   // compute list of available categories (for dropdown)
+   const availableCategories = useMemo(() => {
+     const s = new Set<string>()
+     allNews.forEach(n => s.add(n.category || "Lainnya"))
+     return ["All", ...Array.from(s).sort()]
+   }, [allNews])
+ 
   // compute filtered results + timing in a pure memo (no setState here)
   const searchResult = useMemo(() => {
     if (!searchQuery.trim()) {
-      return { results: allNews, time: 0, itemsChecked: 0 }
+      // still apply category filter even when no text query
+      const results = categoryFilter === "All" ? allNews : allNews.filter(n => (n.category || "Lainnya") === categoryFilter)
+      return { results, time: 0, itemsChecked: 0 }
     }
 
     const startTime = performance.now()
@@ -91,15 +102,17 @@ export default function HomePage() {
     for (let i = 0; i < allNews.length; i++) {
       itemsChecked++
       const newsItem = allNews[i]
-      const cat = (newsItem.category || "").toLowerCase()
-      if (newsItem.title.toLowerCase().includes(query) || cat.includes(query)) {
+      const cat = (newsItem.category || "Lainnya")
+      const matchesText = newsItem.title.toLowerCase().includes(query) || (cat || "").toLowerCase().includes(query)
+      const matchesCategory = categoryFilter === "All" ? true : (cat === categoryFilter)
+      if (matchesText && matchesCategory) {
         results.push(newsItem)
       }
     }
 
     const endTime = performance.now()
     return { results, time: endTime - startTime, itemsChecked }
-  }, [searchQuery, allNews])
+  }, [searchQuery, allNews, categoryFilter])
 
   const filteredNews = searchResult.results
 
@@ -151,7 +164,7 @@ export default function HomePage() {
           </div>
 
           {/* Search Bar */}
-          <div className="relative">
+          <div className="relative flex flex-col sm:flex-row sm:items-center gap-3">
             <Search className="absolute left-4 top-1/2 transform -translate-y-1/2 w-5 h-5 text-blue-400" />
             <input
               type="text"
@@ -160,6 +173,16 @@ export default function HomePage() {
               onChange={(e) => setSearchQuery(e.target.value)}
               className="w-full bg-slate-900/50 backdrop-blur-md text-white placeholder-slate-400 rounded-lg pl-12 pr-4 py-3 border border-blue-500/30 focus:border-cyan-500 focus:ring-2 focus:ring-cyan-500/50 transition-all"
             />
+            {/* Category dropdown */}
+            <div className="mt-3 sm:mt-0 sm:ml-4">
+              <select
+                value={categoryFilter}
+                onChange={(e) => setCategoryFilter(e.target.value)}
+                className="bg-slate-900 text-white rounded-md border border-blue-500/20 px-3 py-2 focus:outline-none"
+              >
+                {availableCategories.map((c) => <option key={c} value={c}>{c}</option>)}
+              </select>
+            </div>
           </div>
         </div>
       </header>
