@@ -1,7 +1,7 @@
 "use client"
 
 import { useState, useMemo, useEffect } from "react"
-import { Search, TrendingUp, Zap, Target } from "lucide-react"
+import { Search, TrendingUp, Zap, Target, RefreshCw } from "lucide-react"
 import NewsCard from "@/components/news-card"
 import SearchStats from "@/components/search-stats"
 import StatCard from "@/components/stat-card"
@@ -16,6 +16,7 @@ export default function HomePage() {
     itemsFound: number
   } | null>(null)
   const [isSearching, setIsSearching] = useState(false)
+  const [isRefreshing, setIsRefreshing] = useState(false)
 
   // start with static/local data, then try to load scraped titles from server
   const [allNews, setAllNews] = useState(() => generateMockNews())
@@ -29,63 +30,116 @@ export default function HomePage() {
         const data = await res.json()
         const items: any[] = Array.isArray(data?.items) ? data.items : (Array.isArray(data?.titles) ? data.titles.map((t: string) => ({ title: t })) : [])
         if (mounted && items.length > 0) {
-           // map scraped titles to same NewsItem shape used by UI
-           const categories = ["Sepak Bola", "Basket", "Tenis", "F1", "MMA", "Bulu Tangkis"]
-           const excerpts = [
-             "Pemain bintang menunjukkan performa luar biasa dalam pertandingan yang menghibur.",
-             "Kemenangan besar membawa tim ke posisi teratas klasemen.",
-             "Performa spektakuler dari atlet membuat fans terpesona.",
-             "Drama menarik terjadi di detik-detik akhir pertandingan.",
-             "Rekor baru tercipta dalam sejarah kompetisi ini.",
-             "Tim berhasil pulih setelah mengalami periode sulit.",
-             "Strategi baru terbukti efektif dalam pertandingan kali ini.",
-             "Penonton merasa puas dengan pertunjukan tim kesayangan.",
-           ]
- 
+          // map scraped titles to same NewsItem shape used by UI
+          const categories = ["Sepak Bola", "Basket", "Tenis", "F1", "MMA", "Bulu Tangkis"]
+          const excerpts = [
+            "Pemain bintang menunjukkan performa luar biasa dalam pertandingan yang menghibur.",
+            "Kemenangan besar membawa tim ke posisi teratas klasemen.",
+            "Performa spektakuler dari atlet membuat fans terpesona.",
+            "Drama menarik terjadi di detik-detik akhir pertandingan.",
+            "Rekor baru tercipta dalam sejarah kompetisi ini.",
+            "Tim berhasil pulih setelah mengalami periode sulit.",
+            "Strategi baru terbukti efektif dalam pertandingan kali ini.",
+            "Penonton merasa puas dengan pertunjukan tim kesayangan.",
+          ]
+
           const mapped = items.slice(0, 200).map((it, idx) => {
-             // format date from scraped datetime if available, else random fallback
-             let dateStr = new Date(Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000).toLocaleDateString("id-ID", {
-               year: "numeric",
-               month: "long",
-               day: "numeric",
-             })
-             if (it?.datetime) {
-               const d = new Date(it.datetime)
-               if (!isNaN(d.getTime())) {
-                 dateStr = d.toLocaleString("id-ID", { year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit" })
-               }
-             }
- 
-             return {
-               id: idx + 1,
-               title: it.title,
-               // ensure category is always a string (fallback "Lainnya")
-               category: it.category || "Lainnya",
-               date: dateStr,
-               excerpt: it.snippet || excerpts[Math.floor(Math.random() * excerpts.length)],
-               image: it.image || `/placeholder.svg?height=400&width=600&query=sports+news+${idx}`,
-               url: it.url,
-             }
-           })
-           setAllNews(mapped)
-         }
-       } catch {
-         // ignore and keep static data
-       }
-     }
-     loadScraped()
-     return () => {
-       mounted = false
-     }
-   }, [])
- 
-   // compute list of available categories (for dropdown)
-   const availableCategories = useMemo(() => {
-     const s = new Set<string>()
-     allNews.forEach(n => s.add(n.category || "Lainnya"))
-     return ["All", ...Array.from(s).sort()]
-   }, [allNews])
- 
+            // format date from scraped datetime if available, else random fallback
+            let dateStr = new Date(Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000).toLocaleDateString("id-ID", {
+              year: "numeric",
+              month: "long",
+              day: "numeric",
+            })
+            if (it?.datetime) {
+              const d = new Date(it.datetime)
+              if (!isNaN(d.getTime())) {
+                dateStr = d.toLocaleString("id-ID", { year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit" })
+              }
+            }
+
+            return {
+              id: idx + 1,
+              title: it.title,
+              // ensure category is always a string (fallback "Lainnya")
+              category: it.category || "Lainnya",
+              date: dateStr,
+              excerpt: it.snippet || excerpts[Math.floor(Math.random() * excerpts.length)],
+              image: it.image || `/placeholder.svg?height=400&width=600&query=sports+news+${idx}`,
+              url: it.url,
+            }
+          })
+          setAllNews(mapped)
+        }
+      } catch {
+        // ignore and keep static data
+      }
+    }
+    loadScraped()
+    return () => {
+      mounted = false
+    }
+  }, [])
+
+  const handleRefresh = async () => {
+    setIsRefreshing(true)
+    try {
+      const res = await fetch("/api/scraped-news?refresh=true")
+      if (!res.ok) throw new Error("Failed to refresh")
+      const data = await res.json()
+      const items: any[] = Array.isArray(data?.items) ? data.items : (Array.isArray(data?.titles) ? data.titles.map((t: string) => ({ title: t })) : [])
+
+      if (items.length > 0) {
+        const categories = ["Sepak Bola", "Basket", "Tenis", "F1", "MMA", "Bulu Tangkis"]
+        const excerpts = [
+          "Pemain bintang menunjukkan performa luar biasa dalam pertandingan yang menghibur.",
+          "Kemenangan besar membawa tim ke posisi teratas klasemen.",
+          "Performa spektakuler dari atlet membuat fans terpesona.",
+          "Drama menarik terjadi di detik-detik akhir pertandingan.",
+          "Rekor baru tercipta dalam sejarah kompetisi ini.",
+          "Tim berhasil pulih setelah mengalami periode sulit.",
+          "Strategi baru terbukti efektif dalam pertandingan kali ini.",
+          "Penonton merasa puas dengan pertunjukan tim kesayangan.",
+        ]
+
+        const mapped = items.slice(0, 200).map((it, idx) => {
+          let dateStr = new Date(Date.now() - Math.random() * 30 * 24 * 60 * 60 * 1000).toLocaleDateString("id-ID", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          })
+          if (it?.datetime) {
+            const d = new Date(it.datetime)
+            if (!isNaN(d.getTime())) {
+              dateStr = d.toLocaleString("id-ID", { year: "numeric", month: "long", day: "numeric", hour: "2-digit", minute: "2-digit" })
+            }
+          }
+
+          return {
+            id: idx + 1,
+            title: it.title,
+            category: it.category || "Lainnya",
+            date: dateStr,
+            excerpt: it.snippet || excerpts[Math.floor(Math.random() * excerpts.length)],
+            image: it.image || `/placeholder.svg?height=400&width=600&query=sports+news+${idx}`,
+            url: it.url,
+          }
+        })
+        setAllNews(mapped)
+      }
+    } catch (error) {
+      console.error("Refresh failed", error)
+    } finally {
+      setIsRefreshing(false)
+    }
+  }
+
+  // compute list of available categories (for dropdown)
+  const availableCategories = useMemo(() => {
+    const s = new Set<string>()
+    allNews.forEach(n => s.add(n.category || "Lainnya"))
+    return ["All", ...Array.from(s).sort()]
+  }, [allNews])
+
   // compute filtered results + timing in a pure memo (no setState here)
   const searchResult = useMemo(() => {
     if (!searchQuery.trim()) {
@@ -161,6 +215,14 @@ export default function HomePage() {
             <h1 className="text-3xl sm:text-4xl font-bold bg-gradient-to-r from-blue-400 to-cyan-400 bg-clip-text text-transparent">
               SPORTS DASHBOARD
             </h1>
+            <button
+              onClick={handleRefresh}
+              disabled={isRefreshing}
+              className="ml-auto sm:ml-4 p-2 rounded-full bg-slate-800/50 hover:bg-slate-800 border border-blue-500/30 text-blue-400 hover:text-blue-300 transition-all disabled:opacity-50 disabled:cursor-not-allowed group"
+              title="Refresh Berita"
+            >
+              <RefreshCw className={`w-5 h-5 ${isRefreshing ? "animate-spin" : "group-hover:rotate-180 transition-transform duration-500"}`} />
+            </button>
           </div>
 
           {/* Search Bar */}

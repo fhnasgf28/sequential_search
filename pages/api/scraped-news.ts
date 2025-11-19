@@ -26,7 +26,7 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
       const updatedAt = parsed?.updatedAt ? new Date(parsed.updatedAt) : null
       const ageMs = updatedAt ? Date.now() - updatedAt.getTime() : Infinity
 
-      if (items.length > 0 && ageMs < oneDayMs) {
+      if (items.length > 0 && ageMs < oneDayMs && req.query.refresh !== "true") {
         return res.status(200).json({ items, updatedAt: parsed.updatedAt || null, fromCache: true })
       }
       // else fallthrough -> re-scrape
