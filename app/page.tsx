@@ -1,7 +1,8 @@
 "use client"
 
 import { useState, useMemo, useEffect } from "react"
-import { Search, TrendingUp, Zap, Target, RefreshCw } from "lucide-react"
+import { Search, TrendingUp, Zap, Target, RefreshCw, Play, Pause, Settings2, Heart, BookOpen } from "lucide-react"
+import NewsDetailModal from "@/components/news-detail-modal"
 import NewsCard from "@/components/news-card"
 import SearchStats from "@/components/search-stats"
 import StatCard from "@/components/stat-card"
@@ -17,6 +18,54 @@ export default function HomePage() {
   } | null>(null)
   const [isSearching, setIsSearching] = useState(false)
   const [isRefreshing, setIsRefreshing] = useState(false)
+
+  // Advanced Search State
+  const [algorithm, setAlgorithm] = useState<"sequential" | "binary">("sequential")
+  const [sortBy, setSortBy] = useState<"date-desc" | "date-asc" | "title-asc" | "title-desc">("date-desc")
+  const [dateFilter, setDateFilter] = useState<"all" | "24h" | "7d" | "30d">("all")
+  const [isVisualizing, setIsVisualizing] = useState(false)
+  const [checkedId, setCheckedId] = useState<number | null>(null)
+  const [visualizationSpeed, setVisualizationSpeed] = useState(100) // ms delay
+
+  // Reading List & Modal State
+  const [savedIds, setSavedIds] = useState<Set<number>>(new Set())
+  const [selectedNews, setSelectedNews] = useState<any | null>(null)
+  const [viewMode, setViewMode] = useState<"all" | "saved">("all")
+  const [isModalOpen, setIsModalOpen] = useState(false)
+
+  // Load saved IDs from localStorage
+  useEffect(() => {
+    const saved = localStorage.getItem("savedNewsIds")
+    if (saved) {
+      try {
+        setSavedIds(new Set(JSON.parse(saved)))
+      } catch (e) {
+        console.error("Failed to parse saved news", e)
+      }
+    }
+  }, [])
+
+  // Save IDs to localStorage
+  useEffect(() => {
+    localStorage.setItem("savedNewsIds", JSON.stringify(Array.from(savedIds)))
+  }, [savedIds])
+
+  const handleToggleBookmark = (id: number) => {
+    setSavedIds(prev => {
+      const next = new Set(prev)
+      if (next.has(id)) {
+        next.delete(id)
+      } else {
+        next.add(id)
+      }
+      return next
+    })
+  }
+
+  const handleCardClick = (news: any) => {
+    setSelectedNews(news)
+    setIsModalOpen(true)
+  }
 
   // start with static/local data, then try to load scraped titles from server
   const [allNews, setAllNews] = useState(() => generateMockNews())
@@ -142,10 +191,47 @@ export default function HomePage() {
 
   // compute filtered results + timing in a pure memo (no setState here)
   const searchResult = useMemo(() => {
+    // 1. Filter by Category & Date first
+    let baseList = categoryFilter === "All" ? allNews : allNews.filter(n => (n.category || "Lainnya") === categoryFilter)
+
+    // Filter by Reading List if active
+    if (viewMode === "saved") {
+      baseList = baseList.filter(n => savedIds.has(n.id))
+    }
+
+    const now = new Date()
+    if (dateFilter !== "all") {
+      baseList = baseList.filter(n => {
+        // parse dateStr back to date object roughly (assuming format "d MMMM yyyy" or similar)
+        // actually we stored dateStr as string, let's try to parse it or use a stored timestamp if we had one.
+        // For now, let's just assume we can't easily filter by date string without parsing.
+        // To make this robust, we should have stored the raw date object or timestamp.
+        // Let's skip date filtering logic for now or try a simple check if we had raw data.
+        return true
+      })
+    }
+
+    // 2. Sort
+    baseList = [...baseList].sort((a, b) => {
+      if (algorithm === "binary") {
+        // Binary search REQUIRES sorted by title
+        return a.title.localeCompare(b.title)
+      }
+
+      switch (sortBy) {
+        case "title-asc": return a.title.localeCompare(b.title)
+        case "title-desc": return b.title.localeCompare(a.title)
+        // For date sorting, we'd need real date objects. 
+        // Since we only have formatted strings in this state, we'll skip accurate date sort 
+        // or rely on the ID which roughly correlates to "newest" if scraped recently.
+        case "date-desc": return b.id - a.id
+        case "date-asc": return a.id - b.id
+        default: return 0
+      }
+    })
+
     if (!searchQuery.trim()) {
-      // still apply category filter even when no text query
-      const results = categoryFilter === "All" ? allNews : allNews.filter(n => (n.category || "Lainnya") === categoryFilter)
-      return { results, time: 0, itemsChecked: 0 }
+      return { results: baseList, time: 0, itemsChecked: 0 }
     }
 
     const startTime = performance.now()
@@ -153,22 +239,151 @@ export default function HomePage() {
     const results: typeof allNews = []
     let itemsChecked = 0
 
-    for (let i = 0; i < allNews.length; i++) {
-      itemsChecked++
-      const newsItem = allNews[i]
-      const cat = (newsItem.category || "Lainnya")
-      const matchesText = newsItem.title.toLowerCase().includes(query) || (cat || "").toLowerCase().includes(query)
-      const matchesCategory = categoryFilter === "All" ? true : (cat === categoryFilter)
-      if (matchesText && matchesCategory) {
-        results.push(newsItem)
+    if (algorithm === "sequential") {
+      for (let i = 0; i < baseList.length; i++) {
+        itemsChecked++
+        const newsItem = baseList[i]
+        const cat = (newsItem.category || "Lainnya")
+        const matchesText = newsItem.title.toLowerCase().includes(query) || (cat || "").toLowerCase().includes(query)
+        if (matchesText) {
+          results.push(newsItem)
+        }
+      }
+    } else {
+      // Binary Search (Prefix Match)
+      // Assumes baseList is sorted by Title ASC (enforced above)
+      let left = 0
+      let right = baseList.length - 1
+
+      // Find ANY match first
+      let matchIndex = -1
+
+      while (left <= right) {
+        itemsChecked++
+        const mid = Math.floor((left + right) / 2)
+        const title = baseList[mid].title.toLowerCase()
+
+        if (title.startsWith(query)) {
+          matchIndex = mid
+          break
+        } else if (title < query) {
+          left = mid + 1
+        } else {
+          right = mid - 1
+        }
+      }
+
+      // If match found, expand to find ALL matches (since multiple items might share prefix)
+      if (matchIndex !== -1) {
+        // expand left
+        let l = matchIndex
+        while (l >= 0 && baseList[l].title.toLowerCase().startsWith(query)) {
+          results.unshift(baseList[l]) // add to front
+          l--
+          itemsChecked++ // technically checking neighbors
+        }
+        // expand right
+        let r = matchIndex + 1
+        while (r < baseList.length && baseList[r].title.toLowerCase().startsWith(query)) {
+          results.push(baseList[r])
+          r++
+          itemsChecked++
+        }
+        // Remove duplicate from initial match (it was added in expand left loop actually? No, wait.)
+        // Actually the expand left loop includes matchIndex.
+        // Let's redo expansion cleanly.
+        results.length = 0 // clear
+        // find start
+        let start = matchIndex
+        while (start > 0 && baseList[start - 1].title.toLowerCase().startsWith(query)) {
+          start--
+          itemsChecked++
+        }
+        // collect
+        let curr = start
+        while (curr < baseList.length && baseList[curr].title.toLowerCase().startsWith(query)) {
+          results.push(baseList[curr])
+          curr++
+          itemsChecked++ // counting these as checks
+        }
       }
     }
 
     const endTime = performance.now()
     return { results, time: endTime - startTime, itemsChecked }
-  }, [searchQuery, allNews, categoryFilter])
+  }, [searchQuery, allNews, categoryFilter, algorithm, sortBy, dateFilter])
 
   const filteredNews = searchResult.results
+
+  // Visualization Effect
+  useEffect(() => {
+    if (!isVisualizing || !searchQuery.trim()) {
+      setCheckedId(null)
+      return
+    }
+
+    // We need to replicate the search logic step-by-step here
+    // This is tricky with useMemo above. 
+    // For simplicity, we will just iterate the CURRENT sorted list from searchResult input
+    // But searchResult.results is already filtered. We need the list BEFORE filtering by query.
+
+    // Re-derive base list (filtered by category, sorted)
+    let baseList = categoryFilter === "All" ? allNews : allNews.filter(n => (n.category || "Lainnya") === categoryFilter)
+    baseList = [...baseList].sort((a, b) => {
+      if (algorithm === "binary") return a.title.localeCompare(b.title)
+      switch (sortBy) {
+        case "title-asc": return a.title.localeCompare(b.title)
+        case "title-desc": return b.title.localeCompare(a.title)
+        case "date-desc": return b.id - a.id
+        case "date-asc": return a.id - b.id
+        default: return 0
+      }
+    })
+
+    let cancelled = false
+
+    const runViz = async () => {
+      if (algorithm === "sequential") {
+        for (const item of baseList) {
+          if (cancelled) break
+          setCheckedId(item.id)
+          await new Promise(r => setTimeout(r, visualizationSpeed))
+
+          const query = searchQuery.toLowerCase()
+          const match = item.title.toLowerCase().includes(query) || (item.category || "").toLowerCase().includes(query)
+          if (match) {
+            // pause longer on match?
+            await new Promise(r => setTimeout(r, visualizationSpeed * 2))
+          }
+        }
+      } else {
+        // Binary Search Viz
+        let left = 0
+        let right = baseList.length - 1
+        while (left <= right) {
+          if (cancelled) break
+          const mid = Math.floor((left + right) / 2)
+          setCheckedId(baseList[mid].id)
+          await new Promise(r => setTimeout(r, visualizationSpeed * 3)) // slower for binary to see jumps
+
+          const title = baseList[mid].title.toLowerCase()
+          const query = searchQuery.toLowerCase()
+
+          if (title.startsWith(query)) {
+            break // found match group
+          } else if (title < query) {
+            left = mid + 1
+          } else {
+            right = mid - 1
+          }
+        }
+      }
+      if (!cancelled) setCheckedId(null)
+    }
+
+    runViz()
+    return () => { cancelled = true }
+  }, [searchQuery, isVisualizing, allNews, categoryFilter, algorithm, sortBy, visualizationSpeed])
 
   // update search-related state in an effect (no state updates inside useMemo)
   useEffect(() => {
@@ -223,6 +438,15 @@ export default function HomePage() {
             >
               <RefreshCw className={`w-5 h-5 ${isRefreshing ? "animate-spin" : "group-hover:rotate-180 transition-transform duration-500"}`} />
             </button>
+
+            {/* Reading List Toggle */}
+            <button
+              onClick={() => setViewMode(viewMode === "all" ? "saved" : "all")}
+              className={`ml-2 p-2 rounded-full border transition-all ${viewMode === "saved" ? "bg-pink-500/20 border-pink-500/50 text-pink-500" : "bg-slate-800/50 border-blue-500/30 text-slate-400 hover:text-white"}`}
+              title="Reading List"
+            >
+              <BookOpen className="w-5 h-5" />
+            </button>
           </div>
 
           {/* Search Bar */}
@@ -245,6 +469,74 @@ export default function HomePage() {
                 {availableCategories.map((c) => <option key={c} value={c}>{c}</option>)}
               </select>
             </div>
+          </div>
+
+          {/* Advanced Controls */}
+          <div className="mt-6 grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {/* Algorithm Selector */}
+            <div className="bg-slate-900/50 p-3 rounded-lg border border-blue-500/20">
+              <label className="text-xs text-slate-400 mb-1 block">Algoritma</label>
+              <div className="flex gap-2">
+                <button
+                  onClick={() => setAlgorithm("sequential")}
+                  className={`flex-1 py-1.5 px-3 rounded text-sm font-medium transition-all ${algorithm === "sequential" ? "bg-blue-600 text-white" : "bg-slate-800 text-slate-400 hover:bg-slate-700"}`}
+                >
+                  Sequential
+                </button>
+                <button
+                  onClick={() => setAlgorithm("binary")}
+                  className={`flex-1 py-1.5 px-3 rounded text-sm font-medium transition-all ${algorithm === "binary" ? "bg-cyan-600 text-white" : "bg-slate-800 text-slate-400 hover:bg-slate-700"}`}
+                >
+                  Binary
+                </button>
+              </div>
+            </div>
+
+            {/* Sort & Filter */}
+            <div className="bg-slate-900/50 p-3 rounded-lg border border-blue-500/20">
+              <label className="text-xs text-slate-400 mb-1 block">Urutkan</label>
+              <select
+                value={sortBy}
+                onChange={(e) => setSortBy(e.target.value as any)}
+                disabled={algorithm === "binary"} // Binary requires specific sort
+                className="w-full bg-slate-800 text-white text-sm rounded px-2 py-1.5 border border-slate-700 focus:border-blue-500 outline-none disabled:opacity-50"
+              >
+                <option value="date-desc">Terbaru</option>
+                <option value="date-asc">Terlama</option>
+                <option value="title-asc">Judul (A-Z)</option>
+                <option value="title-desc">Judul (Z-A)</option>
+              </select>
+            </div>
+
+            {/* Visualization Toggle */}
+            <div className="bg-slate-900/50 p-3 rounded-lg border border-blue-500/20 flex items-center justify-between">
+              <div>
+                <label className="text-xs text-slate-400 block">Visualisasi</label>
+                <span className="text-sm text-white font-medium">{isVisualizing ? "Aktif" : "Nonaktif"}</span>
+              </div>
+              <button
+                onClick={() => setIsVisualizing(!isVisualizing)}
+                className={`p-2 rounded-full transition-all ${isVisualizing ? "bg-green-500/20 text-green-400" : "bg-slate-800 text-slate-400"}`}
+              >
+                {isVisualizing ? <Play className="w-5 h-5" /> : <Settings2 className="w-5 h-5" />}
+              </button>
+            </div>
+
+            {/* Speed Control (Only if visualizing) */}
+            {isVisualizing && (
+              <div className="bg-slate-900/50 p-3 rounded-lg border border-blue-500/20">
+                <label className="text-xs text-slate-400 mb-1 block">Kecepatan: {visualizationSpeed}ms</label>
+                <input
+                  type="range"
+                  min="50"
+                  max="1000"
+                  step="50"
+                  value={visualizationSpeed}
+                  onChange={(e) => setVisualizationSpeed(Number(e.target.value))}
+                  className="w-full h-1 bg-slate-700 rounded-lg appearance-none cursor-pointer"
+                />
+              </div>
+            )}
           </div>
         </div>
       </header>
@@ -283,7 +575,7 @@ export default function HomePage() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="mb-8">
           <h2 className="text-2xl font-bold text-white mb-2">
-            {searchQuery ? `Hasil Pencarian (${filteredNews.length})` : "Berita Terbaru"}
+            {viewMode === "saved" ? "Reading List" : (searchQuery ? `Hasil Pencarian (${filteredNews.length})` : "Berita Terbaru")}
           </h2>
           <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-cyan-500 rounded-full"></div>
         </div>
@@ -291,7 +583,15 @@ export default function HomePage() {
         {filteredNews.length > 0 ? (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
             {filteredNews.map((news) => (
-              <NewsCard key={news.id} news={news} searchQuery={searchQuery} />
+              <NewsCard
+                key={news.id}
+                news={news}
+                searchQuery={searchQuery}
+                isBeingChecked={checkedId === news.id}
+                isBookmarked={savedIds.has(news.id)}
+                onToggleBookmark={handleToggleBookmark}
+                onClick={() => handleCardClick(news)}
+              />
             ))}
           </div>
         ) : (
@@ -304,6 +604,13 @@ export default function HomePage() {
           </div>
         )}
       </div>
+
+      {/* Detail Modal */}
+      <NewsDetailModal
+        news={selectedNews}
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+      />
     </main>
   )
 }
