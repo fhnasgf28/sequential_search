@@ -4,7 +4,7 @@ export interface NewsItem {
   category: string
   date: string
   excerpt: string
-  image: string
+  image: string 
   url?: string
 }
 
